@@ -1,0 +1,6 @@
+{
+  "name": "Sabores do Brasil — Portal de Receitas",
+  "description": "Portal culinário completo com receitas fáceis e deliciosas de bolos, comidas típicas brasileiras, carnes, sobremesas e dicas de cozinha profissional.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

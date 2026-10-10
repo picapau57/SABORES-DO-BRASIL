@@ -1,0 +1,4428 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sabores do Brasil — Receitas Fáceis, Deliciosas e Tradicionais</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Aprenda a fazer receitas brasileiras deliciosas, bolos fofinhos, carnes suculentas, pratos para restaurantes e sobremesas tradicionais com dicas práticas de cozinha.">
+  <meta name="keywords" content="receitas fáceis, comida brasileira, bolo fofinho, feijoada, churrasco, pudim de leite, receitas para restaurantes, culinária caseira">
+  <meta name="author" content="Sabores do Brasil">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Redes Sociais -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sabores do Brasil — Receitas Fáceis e Deliciosas">
+  <meta property="og:description" content="Descubra receitas testadas de bolos, carnes, comidas típicas brasileiras e técnicas gastronômicas para sua cozinha ou negócio.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1200&auto=format&fit=crop&q=80">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Sabores do Brasil">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sabores do Brasil — Portal Gastronômico">
+  <meta name="twitter:description" content="Receitas práticas, comidas típicas e segredos culinários de todo o Brasil.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1200&auto=format&fit=crop&q=80">
+
+  <!-- =====================================================================
+       CONFIGURAÇÃO DO GOOGLE ADSENSE
+       Instruções para o proprietário do site:
+       1. Crie ou acesse sua conta no Google AdSense (https://adsense.google.com).
+       2. Obtenha seu ID de editor exclusivo (exemplo: ca-pub-1234567890123456).
+       3. Descomente a tag de script abaixo e substitua o texto
+          'COLE_AQUI_O_ID_DO_EDITOR_GOOGLE_ADSENSE' pelo seu ID real.
+       4. Adicione também os blocos <ins class="adsbygoogle"> nos locais
+          indicados com seu 'data-ad-slot' correspondente.
+       5. Publique o arquivo ads.txt na raiz do seu domínio oficial.
+       IMPORTANTE: A inclusão do script não garante aprovação imediata. O Google
+       analisa se o site cumpre todas as políticas do programa.
+       ===================================================================== -->
+  <!--
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-COLE_AQUI_O_ID_DO_EDITOR_GOOGLE_ADSENSE"
+     crossorigin="anonymous"></script>
+  -->
+
+  <!-- Schema.org Dados Estruturados Gerais (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Sabores do Brasil",
+    "alternateName": "Portal Sabores do Brasil",
+    "url": "https://saboresdobrasil.com.br",
+    "description": "Portal gastronômico gratuito com receitas fáceis, bolos, comidas típicas brasileiras, carnes e dicas de culinária.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://saboresdobrasil.com.br/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- Tag de dados estruturados para a receita em exibição (atualizada via JS) -->
+  <script id="schema-recipe" type="application/ld+json"></script>
+
+  <style>
+    /* =====================================================================
+       PALETA DE CORES E VARIÁVEIS DO SISTEMA
+       ===================================================================== */
+    :root {
+      --cor-tomate: #C62828;
+      --cor-tomate-hover: #A71D1D;
+      --cor-laranja: #FF8C00;
+      --cor-laranja-claro: #FFF3E0;
+      --cor-verde: #2E7D32;
+      --cor-verde-claro: #E8F5E9;
+      --cor-creme: #FFF8F0;
+      --cor-creme-card: #FFFFFF;
+      --cor-branco: #FFFFFF;
+      --cor-marrom: #3E2723;
+      --cor-marrom-suave: #5D4037;
+      --cor-cinza-texto: #4A4A4A;
+      --cor-cinza-claro: #E0E0E0;
+      --cor-cinza-fundo: #F5F5F7;
+      --cor-dourado: #F59E0B;
+      --sombra-suave: 0 4px 15px rgba(62, 39, 35, 0.08);
+      --sombra-media: 0 8px 24px rgba(62, 39, 35, 0.12);
+      --sombra-alta: 0 16px 36px rgba(62, 39, 35, 0.18);
+      --raio-borda: 14px;
+      --raio-pequeno: 8px;
+      --transicao: all 0.25s cubic-bezier(0.2, 0, 0, 1);
+      --largura-max: 1240px;
+    }
+
+    /* Reset e Acessibilidade */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--cor-creme);
+      color: var(--cor-cinza-texto);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transicao);
+    }
+
+    button {
+      font-family: inherit;
+      border: none;
+      background: none;
+      cursor: pointer;
+      transition: var(--transicao);
+    }
+
+    input, textarea, select {
+      font-family: inherit;
+      font-size: 1rem;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .sr-only:focus {
+      position: static;
+      width: auto;
+      height: auto;
+      padding: 10px 16px;
+      margin: 0;
+      background: var(--cor-marrom);
+      color: #fff;
+      clip: auto;
+      z-index: 9999;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--largura-max);
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* =====================================================================
+       CABEÇALHO E BARRA DE NAVEGAÇÃO
+       ===================================================================== */
+    .cabecalho {
+      background: var(--cor-branco);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      border-bottom: 2px solid #F1E5D8;
+    }
+
+    .cabecalho-topo {
+      background: var(--cor-marrom);
+      color: #FFF;
+      font-size: 0.82rem;
+      padding: 0.35rem 0;
+      text-align: center;
+      letter-spacing: 0.3px;
+    }
+
+    .cabecalho-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-weight: 800;
+      font-size: 1.45rem;
+      color: var(--cor-tomate);
+      letter-spacing: -0.5px;
+    }
+
+    .logo-icone {
+      background: linear-gradient(135deg, var(--cor-tomate), var(--cor-laranja));
+      color: #FFF;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(198, 40, 40, 0.25);
+    }
+
+    .logo-texto span {
+      display: block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      color: var(--cor-laranja);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-top: -2px;
+    }
+
+    .nav-desktop {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+    }
+
+    .nav-desktop a {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--cor-marrom);
+      padding: 0.4rem 0.2rem;
+      position: relative;
+    }
+
+    .nav-desktop a:hover,
+    .nav-desktop a.ativo {
+      color: var(--cor-tomate);
+    }
+
+    .nav-desktop a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: var(--cor-tomate);
+      transition: var(--transicao);
+    }
+
+    .nav-desktop a:hover::after,
+    .nav-desktop a.ativo::after {
+      width: 100%;
+    }
+
+    .acoes-cabecalho {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .btn-busca-topo, .btn-favoritos-topo {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--cor-creme);
+      color: var(--cor-marrom);
+      border: 1px solid var(--cor-cinza-claro);
+      position: relative;
+    }
+
+    .btn-busca-topo:hover, .btn-favoritos-topo:hover {
+      background: var(--cor-laranja-claro);
+      color: var(--cor-tomate);
+      border-color: var(--cor-laranja);
+    }
+
+    .contador-badge {
+      position: absolute;
+      top: -4px;
+      right: -4px;
+      background: var(--cor-tomate);
+      color: #FFF;
+      font-size: 0.7rem;
+      font-weight: 700;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #FFF;
+    }
+
+    .btn-menu-mobile {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border-radius: var(--raio-pequeno);
+      align-items: center;
+      justify-content: center;
+      background: var(--cor-creme);
+      color: var(--cor-marrom);
+    }
+
+    /* Menu Gaveta Mobile */
+    .menu-mobile {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 82%;
+      max-width: 340px;
+      height: 100vh;
+      background: var(--cor-branco);
+      z-index: 2000;
+      box-shadow: 4px 0 20px rgba(0, 0, 0, 0.2);
+      transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    .menu-mobile.aberto {
+      left: 0;
+    }
+
+    .menu-mobile-header {
+      padding: 1.25rem;
+      border-bottom: 1px solid var(--cor-cinza-claro);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .menu-mobile-links {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem 0;
+    }
+
+    .menu-mobile-links a {
+      padding: 0.85rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--cor-marrom);
+      border-left: 4px solid transparent;
+    }
+
+    .menu-mobile-links a:hover,
+    .menu-mobile-links a.ativo {
+      background: var(--cor-laranja-claro);
+      color: var(--cor-tomate);
+      border-left-color: var(--cor-tomate);
+    }
+
+    .menu-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 1999;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transicao);
+    }
+
+    .menu-overlay.aberto {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* =====================================================================
+       BANNER PUBLICIDADE (PADRÃO GOOGLE ADSENSE)
+       ===================================================================== */
+    .espaco-anuncio {
+      margin: 1.5rem auto;
+      text-align: center;
+      max-width: var(--largura-max);
+      padding: 0 1rem;
+    }
+
+    .bloco-anuncio {
+      background: #FDFBF7;
+      border: 1px dashed #D7CCC8;
+      border-radius: var(--raio-pequeno);
+      padding: 1rem 0.5rem;
+      min-height: 90px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #8D6E63;
+      font-size: 0.78rem;
+      letter-spacing: 0.5px;
+      position: relative;
+    }
+
+    .bloco-anuncio::before {
+      content: 'PUBLICIDADE';
+      position: absolute;
+      top: 4px;
+      left: 10px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: #A1887F;
+      letter-spacing: 1px;
+    }
+
+    .bloco-anuncio p {
+      margin-top: 6px;
+      color: #6D4C41;
+      font-weight: 500;
+    }
+
+    .bloco-anuncio code {
+      background: #EFEBE9;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      font-family: monospace;
+      color: var(--cor-tomate);
+      margin-top: 4px;
+    }
+
+    /* =====================================================================
+       SEÇÃO HERO
+       ===================================================================== */
+    .hero {
+      position: relative;
+      background: linear-gradient(rgba(38, 22, 16, 0.72), rgba(38, 22, 16, 0.85)),
+                  url('https://images.unsplash.com/photo-1544025162-d76694265947?w=1600&auto=format&fit=crop&q=80') center/cover no-repeat;
+      color: #FFF;
+      padding: 5.5rem 1rem 6rem;
+      text-align: center;
+    }
+
+    .hero-conteudo {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 140, 0, 0.2);
+      border: 1px solid var(--cor-laranja);
+      color: #FFD59E;
+      padding: 0.4rem 1.1rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-titulo {
+      font-size: clamp(2.1rem, 4.5vw, 3.4rem);
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+      letter-spacing: -1px;
+      color: #FFFFFF;
+    }
+
+    .hero-subtitulo {
+      font-size: clamp(1rem, 2vw, 1.22rem);
+      line-height: 1.6;
+      color: #F5EBE1;
+      margin-bottom: 2.2rem;
+      font-weight: 400;
+    }
+
+    .hero-botoes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .btn-principal {
+      background: var(--cor-tomate);
+      color: #FFF;
+      padding: 0.9rem 1.8rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      box-shadow: 0 6px 18px rgba(198, 40, 40, 0.4);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-principal:hover {
+      background: var(--cor-tomate-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(198, 40, 40, 0.5);
+    }
+
+    .btn-secundario {
+      background: #FFF;
+      color: var(--cor-marrom);
+      padding: 0.9rem 1.8rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-secundario:hover {
+      background: #F8ECE0;
+      color: var(--cor-tomate);
+      transform: translateY(-2px);
+    }
+
+    .btn-terciario {
+      background: rgba(255, 255, 255, 0.15);
+      color: #FFF;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      padding: 0.9rem 1.8rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      backdrop-filter: blur(4px);
+    }
+
+    .btn-terciario:hover {
+      background: rgba(255, 255, 255, 0.25);
+      border-color: #FFF;
+      transform: translateY(-2px);
+    }
+
+    .hero-destaques {
+      margin-top: 3.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      padding-top: 2rem;
+    }
+
+    .hero-stat {
+      text-align: center;
+    }
+
+    .hero-stat strong {
+      display: block;
+      font-size: 1.6rem;
+      color: var(--cor-laranja);
+      font-weight: 800;
+    }
+
+    .hero-stat span {
+      font-size: 0.85rem;
+      color: #DDD;
+    }
+
+    /* =====================================================================
+       BARRA DE BUSCA E FILTROS RÁPIDOS
+       ===================================================================== */
+    .secao-busca {
+      margin-top: -2.2rem;
+      position: relative;
+      z-index: 20;
+      margin-bottom: 3rem;
+    }
+
+    .card-busca {
+      background: var(--cor-branco);
+      border-radius: var(--raio-borda);
+      box-shadow: var(--sombra-media);
+      padding: 1.5rem;
+      border: 1px solid #EFE4D6;
+    }
+
+    .campo-pesquisa-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .campo-pesquisa-icone {
+      position: absolute;
+      left: 1.1rem;
+      color: #8D6E63;
+      pointer-events: none;
+    }
+
+    .input-pesquisa {
+      width: 100%;
+      padding: 0.95rem 1rem 0.95rem 3.1rem;
+      border: 2px solid #E5D5C5;
+      border-radius: 12px;
+      font-size: 1.05rem;
+      color: var(--cor-marrom);
+      background: #FFFAF5;
+      transition: var(--transicao);
+    }
+
+    .input-pesquisa:focus {
+      outline: none;
+      border-color: var(--cor-tomate);
+      background: #FFF;
+      box-shadow: 0 0 0 4px rgba(198, 40, 40, 0.1);
+    }
+
+    .btn-limpar-busca {
+      position: absolute;
+      right: 0.85rem;
+      background: #EFEBE9;
+      color: #6D4C41;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+    }
+
+    .filtros-linha {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-top: 1.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid #F3E9DF;
+    }
+
+    .filtros-botoes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .btn-filtro {
+      padding: 0.45rem 0.95rem;
+      border-radius: 50px;
+      background: var(--cor-creme);
+      border: 1px solid #E2D3C4;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--cor-marrom);
+    }
+
+    .btn-filtro:hover {
+      background: var(--cor-laranja-claro);
+      border-color: var(--cor-laranja);
+      color: var(--cor-tomate);
+    }
+
+    .btn-filtro.ativo {
+      background: var(--cor-tomate);
+      color: #FFF;
+      border-color: var(--cor-tomate);
+      box-shadow: 0 2px 8px rgba(198, 40, 40, 0.25);
+    }
+
+    .filtro-selecao-extra {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .select-dificuldade {
+      padding: 0.45rem 0.85rem;
+      border-radius: 8px;
+      border: 1px solid #E2D3C4;
+      background: #FFF;
+      color: var(--cor-marrom);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .resultado-contador {
+      font-size: 0.88rem;
+      color: #795548;
+      font-weight: 500;
+      margin-top: 0.8rem;
+    }
+
+    /* =====================================================================
+       TÍTULOS E CABEÇALHOS DE SEÇÕES
+       ===================================================================== */
+    .secao {
+      padding: 3.5rem 0;
+    }
+
+    .secao-topo {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .secao-tag {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: var(--cor-tomate);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      background: rgba(198, 40, 40, 0.08);
+      padding: 0.3rem 0.85rem;
+      border-radius: 50px;
+      margin-bottom: 0.5rem;
+    }
+
+    .secao-titulo {
+      font-size: clamp(1.6rem, 3vw, 2.25rem);
+      font-weight: 800;
+      color: var(--cor-marrom);
+      letter-spacing: -0.5px;
+      line-height: 1.25;
+      margin-bottom: 0.65rem;
+    }
+
+    .secao-descricao {
+      font-size: 1rem;
+      color: var(--cor-cinza-texto);
+      line-height: 1.55;
+    }
+
+    /* =====================================================================
+       GRID DE CATEGORIAS
+       ===================================================================== */
+    .grid-categorias {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card-categoria {
+      background: var(--cor-branco);
+      border-radius: var(--raio-borda);
+      overflow: hidden;
+      box-shadow: var(--sombra-suave);
+      border: 1px solid #EFE4D6;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .card-categoria:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--sombra-media);
+      border-color: var(--cor-laranja);
+    }
+
+    .categoria-imagem-wrapper {
+      position: relative;
+      height: 165px;
+      overflow: hidden;
+    }
+
+    .categoria-imagem-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .card-categoria:hover .categoria-imagem-wrapper img {
+      transform: scale(1.06);
+    }
+
+    .categoria-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(62, 39, 35, 0.85);
+      color: #FFF;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.25rem 0.65rem;
+      border-radius: 50px;
+      backdrop-filter: blur(4px);
+    }
+
+    .categoria-corpo {
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .categoria-titulo {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--cor-marrom);
+      margin-bottom: 0.4rem;
+    }
+
+    .categoria-desc {
+      font-size: 0.88rem;
+      color: #666;
+      line-height: 1.45;
+      margin-bottom: 1rem;
+      flex-grow: 1;
+    }
+
+    .categoria-link {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--cor-tomate);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* =====================================================================
+       GRID DE RECEITAS (CARDS)
+       ===================================================================== */
+    .grid-receitas {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .card-receita {
+      background: var(--cor-branco);
+      border-radius: var(--raio-borda);
+      overflow: hidden;
+      box-shadow: var(--sombra-suave);
+      border: 1px solid #EDE2D4;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: var(--transicao);
+    }
+
+    .card-receita:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--sombra-media);
+      border-color: #DCC3AA;
+    }
+
+    .receita-thumb {
+      position: relative;
+      height: 210px;
+      overflow: hidden;
+      background: #EFEBE9;
+    }
+
+    .receita-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .card-receita:hover .receita-thumb img {
+      transform: scale(1.05);
+    }
+
+    .btn-card-fav {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 36px;
+      height: 36px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #8D6E63;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      z-index: 5;
+    }
+
+    .btn-card-fav:hover {
+      color: var(--cor-tomate);
+      background: #FFF;
+      transform: scale(1.1);
+    }
+
+    .btn-card-fav.favoritado {
+      color: var(--cor-tomate);
+      background: #FFF;
+    }
+
+    .btn-card-fav.favoritado svg {
+      fill: var(--cor-tomate);
+    }
+
+    .receita-cat-tag {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      background: var(--cor-tomate);
+      color: #FFF;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.25rem 0.65rem;
+      border-radius: 50px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .receita-conteudo {
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .receita-meta-topo {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: #8D6E63;
+      margin-bottom: 0.5rem;
+    }
+
+    .meta-dificuldade {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-weight: 600;
+    }
+
+    .dificuldade-facil { color: var(--cor-verde); }
+    .dificuldade-medio { color: var(--cor-laranja); }
+    .dificuldade-avancado { color: var(--cor-tomate); }
+
+    .receita-card-titulo {
+      font-size: 1.22rem;
+      font-weight: 700;
+      color: var(--cor-marrom);
+      line-height: 1.35;
+      margin-bottom: 0.5rem;
+    }
+
+    .receita-card-resumo {
+      font-size: 0.88rem;
+      color: #555;
+      line-height: 1.5;
+      margin-bottom: 1.2rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      flex-grow: 1;
+    }
+
+    .receita-detalhes-rapidos {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 0.85rem;
+      border-top: 1px solid #F1E5D8;
+      font-size: 0.82rem;
+      color: #6D4C41;
+      margin-bottom: 1rem;
+    }
+
+    .detalhe-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .btn-ver-receita {
+      background: var(--cor-marrom);
+      color: #FFF;
+      text-align: center;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .btn-ver-receita:hover {
+      background: var(--cor-tomate);
+    }
+
+    /* Vazio state */
+    .sem-resultados {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 4rem 1rem;
+      background: #FFF;
+      border-radius: var(--raio-borda);
+      border: 1px dashed #D7CCC8;
+    }
+
+    .sem-resultados-icone {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #A1887F;
+    }
+
+    .sem-resultados h3 {
+      font-size: 1.35rem;
+      color: var(--cor-marrom);
+      margin-bottom: 0.5rem;
+    }
+
+    .sem-resultados p {
+      color: #795548;
+      margin-bottom: 1.5rem;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* =====================================================================
+       GALERIA GASTRONÔMICA
+       ===================================================================== */
+    .grid-galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .item-galeria {
+      position: relative;
+      height: 200px;
+      border-radius: var(--raio-pequeno);
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: var(--sombra-suave);
+    }
+
+    .item-galeria img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .item-galeria:hover img {
+      transform: scale(1.08);
+    }
+
+    .legenda-galeria {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(62, 39, 35, 0.85) 0%, transparent 60%);
+      display: flex;
+      align-items: flex-end;
+      padding: 0.9rem;
+      color: #FFF;
+      font-size: 0.88rem;
+      font-weight: 600;
+      opacity: 0;
+      transition: var(--transicao);
+    }
+
+    .item-galeria:hover .legenda-galeria {
+      opacity: 1;
+    }
+
+    /* =====================================================================
+       SEÇÃO DICAS DO CHEF (ARTIGOS EDUCATIVOS)
+       ===================================================================== */
+    .grid-dicas {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .card-dica {
+      background: var(--cor-branco);
+      border-radius: var(--raio-borda);
+      padding: 1.75rem;
+      box-shadow: var(--sombra-suave);
+      border: 1px solid #EFE4D6;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .card-dica:hover {
+      box-shadow: var(--sombra-media);
+      border-color: var(--cor-laranja);
+    }
+
+    .dica-icone {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--cor-laranja-claro);
+      color: var(--cor-tomate);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+
+    .dica-titulo {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--cor-marrom);
+      line-height: 1.35;
+      margin-bottom: 0.75rem;
+    }
+
+    .dica-resumo {
+      font-size: 0.92rem;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+      flex-grow: 1;
+    }
+
+    .btn-ler-artigo {
+      align-self: flex-start;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--cor-tomate);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .btn-ler-artigo:hover {
+      color: var(--cor-laranja);
+    }
+
+    /* =====================================================================
+       MODAL DE VISUALIZAÇÃO DE RECEITA INDIVIDUAL (COMPLETA)
+       ===================================================================== */
+    .modal-receita-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(46, 26, 20, 0.75);
+      backdrop-filter: blur(5px);
+      z-index: 3000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      overflow-y: auto;
+    }
+
+    .modal-receita-backdrop.aberto {
+      display: flex;
+    }
+
+    .modal-receita-container {
+      background: #FFF;
+      border-radius: var(--raio-borda);
+      width: 100%;
+      max-width: 900px;
+      max-height: 92vh;
+      overflow-y: auto;
+      position: relative;
+      box-shadow: var(--sombra-alta);
+    }
+
+    .btn-fechar-modal {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.92);
+      color: var(--cor-marrom);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-fechar-modal:hover {
+      background: #FFF;
+      color: var(--cor-tomate);
+    }
+
+    .modal-receita-capa {
+      position: relative;
+      height: 340px;
+      background: #3E2723;
+    }
+
+    .modal-receita-capa img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .modal-receita-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(38, 22, 16, 0.85) 0%, rgba(38, 22, 16, 0.2) 60%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.75rem;
+      color: #FFF;
+    }
+
+    .modal-tag {
+      background: var(--cor-tomate);
+      color: #FFF;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.3rem 0.8rem;
+      border-radius: 50px;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+      align-self: flex-start;
+    }
+
+    .modal-titulo {
+      font-size: clamp(1.5rem, 3.5vw, 2.3rem);
+      font-weight: 800;
+      line-height: 1.2;
+      color: #FFF;
+      margin-bottom: 0.4rem;
+    }
+
+    .modal-receita-corpo {
+      padding: 2rem;
+    }
+
+    .modal-intro {
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: #4A4A4A;
+      margin-bottom: 1.75rem;
+      border-left: 4px solid var(--cor-tomate);
+      padding-left: 1rem;
+      font-style: italic;
+      background: #FFFBF7;
+      padding: 1rem 1rem 1rem 1.25rem;
+      border-radius: 0 8px 8px 0;
+    }
+
+    /* Grade de informações rápidas da receita */
+    .grade-rapida {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 1rem;
+      background: var(--cor-creme);
+      padding: 1.25rem;
+      border-radius: var(--raio-pequeno);
+      border: 1px solid #EFE4D6;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .item-rapido span {
+      display: block;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #8D6E63;
+      margin-bottom: 3px;
+    }
+
+    .item-rapido strong {
+      font-size: 1rem;
+      color: var(--cor-marrom);
+      font-weight: 800;
+    }
+
+    /* Ações da receita (Imprimir, Favoritar, Compartilhar) */
+    .acoes-receita-barra {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid #EFE4D6;
+    }
+
+    .btn-acao-rec {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 0.55rem 1.1rem;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      border: 1px solid #D7CCC8;
+      background: #FFF;
+      color: var(--cor-marrom);
+    }
+
+    .btn-acao-rec:hover {
+      background: var(--cor-laranja-claro);
+      color: var(--cor-tomate);
+      border-color: var(--cor-laranja);
+    }
+
+    .btn-acao-rec.ativo-fav {
+      background: #FFEBEE;
+      color: var(--cor-tomate);
+      border-color: var(--cor-tomate);
+    }
+
+    /* Blocos de Ingredientes e Modo de Preparo */
+    .secao-conteudo-rec {
+      margin-bottom: 2.25rem;
+    }
+
+    .secao-conteudo-rec h3 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--cor-marrom);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .lista-ingredientes {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 0.65rem;
+    }
+
+    .lista-ingredientes li {
+      background: #FFF9F4;
+      padding: 0.7rem 1rem;
+      border-radius: 8px;
+      border-left: 3px solid var(--cor-laranja);
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .passos-preparo {
+      list-style: none;
+      counter-reset: passo-counter;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .passos-preparo li {
+      position: relative;
+      padding-left: 3.2rem;
+      font-size: 0.98rem;
+      line-height: 1.6;
+    }
+
+    .passos-preparo li::before {
+      counter-increment: passo-counter;
+      content: counter(passo-counter);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 38px;
+      height: 38px;
+      background: var(--cor-tomate);
+      color: #FFF;
+      border-radius: 50%;
+      font-weight: 800;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Caixas de destaque: Dica do Chef, Erros Comuns, Conservação */
+    .caixa-destaque {
+      padding: 1.25rem;
+      border-radius: var(--raio-pequeno);
+      margin-bottom: 1.5rem;
+      font-size: 0.92rem;
+      line-height: 1.55;
+    }
+
+    .caixa-dica {
+      background: #FFF8E1;
+      border-left: 4px solid var(--cor-laranja);
+      color: #5D4037;
+    }
+
+    .caixa-erros {
+      background: #FFEBEE;
+      border-left: 4px solid var(--cor-tomate);
+      color: #4A148C;
+    }
+
+    .caixa-conservacao {
+      background: #E8F5E9;
+      border-left: 4px solid var(--cor-verde);
+      color: #1B5E20;
+    }
+
+    .caixa-destaque strong {
+      display: block;
+      font-size: 0.98rem;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Tabela Nutricional */
+    .tabela-nutricional-box {
+      background: #FDFBF7;
+      border: 1px solid #EFE4D6;
+      border-radius: var(--raio-pequeno);
+      padding: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .tabela-nutri {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      margin-top: 0.75rem;
+    }
+
+    .tabela-nutri th, .tabela-nutri td {
+      padding: 0.5rem;
+      border-bottom: 1px solid #EFE4D6;
+      text-align: left;
+    }
+
+    .tabela-nutri th {
+      color: var(--cor-marrom);
+      font-weight: 700;
+    }
+
+    .aviso-nutri {
+      font-size: 0.75rem;
+      color: #8D6E63;
+      margin-top: 0.65rem;
+      font-style: italic;
+    }
+
+    /* Receitas Relacionadas */
+    .receitas-relacionadas-box {
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 2px solid #EFE4D6;
+    }
+
+    .grade-relacionadas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .mini-card-rel {
+      background: #FFF;
+      border: 1px solid #EFE4D6;
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .mini-card-rel:hover {
+      border-color: var(--cor-tomate);
+    }
+
+    .mini-card-rel img {
+      height: 110px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .mini-card-rel p {
+      padding: 0.65rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--cor-marrom);
+    }
+
+    /* =====================================================================
+       MODAL DE ARTIGO / DICA COMPLETA
+       ===================================================================== */
+    .modal-artigo-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(46, 26, 20, 0.75);
+      backdrop-filter: blur(5px);
+      z-index: 3000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      overflow-y: auto;
+    }
+
+    .modal-artigo-backdrop.aberto {
+      display: flex;
+    }
+
+    .modal-artigo-container {
+      background: #FFF;
+      border-radius: var(--raio-borda);
+      width: 100%;
+      max-width: 800px;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 2.5rem;
+      position: relative;
+    }
+
+    .artigo-conteudo h2 {
+      font-size: 1.8rem;
+      color: var(--cor-marrom);
+      margin-bottom: 0.5rem;
+      font-weight: 800;
+    }
+
+    .artigo-meta {
+      font-size: 0.85rem;
+      color: #8D6E63;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.85rem;
+      border-bottom: 1px solid #EFE4D6;
+    }
+
+    .artigo-texto {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #333;
+    }
+
+    .artigo-texto h3 {
+      font-size: 1.25rem;
+      color: var(--cor-marrom);
+      margin: 1.5rem 0 0.5rem;
+      font-weight: 700;
+    }
+
+    .artigo-texto p {
+      margin-bottom: 1rem;
+    }
+
+    .artigo-texto ul, .artigo-texto ol {
+      margin: 0 0 1rem 1.5rem;
+    }
+
+    .artigo-texto li {
+      margin-bottom: 0.4rem;
+    }
+
+    /* =====================================================================
+       PÁGINAS INSTITUCIONAIS / MODAIS (SOBRE, CONTATO, POLÍTICAS)
+       ===================================================================== */
+    .modal-institucional-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(46, 26, 20, 0.75);
+      backdrop-filter: blur(5px);
+      z-index: 3000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      overflow-y: auto;
+    }
+
+    .modal-institucional-backdrop.aberto {
+      display: flex;
+    }
+
+    .modal-institucional-container {
+      background: #FFF;
+      border-radius: var(--raio-borda);
+      width: 100%;
+      max-width: 780px;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 2.2rem;
+      position: relative;
+    }
+
+    .institucional-conteudo h2 {
+      font-size: 1.8rem;
+      color: var(--cor-marrom);
+      margin-bottom: 1rem;
+      font-weight: 800;
+    }
+
+    .institucional-conteudo p {
+      font-size: 0.98rem;
+      line-height: 1.65;
+      color: #444;
+      margin-bottom: 1rem;
+    }
+
+    .institucional-conteudo h3 {
+      font-size: 1.2rem;
+      color: var(--cor-marrom);
+      margin: 1.4rem 0 0.5rem;
+    }
+
+    /* Formulário de Contato */
+    .form-contato {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .grupo-campo {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      text-align: left;
+    }
+
+    .grupo-campo label {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--cor-marrom);
+    }
+
+    .grupo-campo input, .grupo-campo textarea {
+      padding: 0.75rem 1rem;
+      border: 1px solid #D7CCC8;
+      border-radius: 8px;
+      background: #FAF7F2;
+    }
+
+    .grupo-campo input:focus, .grupo-campo textarea:focus {
+      outline: none;
+      border-color: var(--cor-tomate);
+      background: #FFF;
+    }
+
+    .aviso-estatico {
+      font-size: 0.8rem;
+      color: #8D6E63;
+      background: #FFF3E0;
+      border-left: 3px solid var(--cor-laranja);
+      padding: 0.6rem 0.8rem;
+      border-radius: 4px;
+      margin-top: 0.5rem;
+    }
+
+    /* =====================================================================
+       RODAPÉ
+       ===================================================================== */
+    .rodape {
+      background: #271713;
+      color: #E6D7CD;
+      padding: 4.5rem 0 2rem;
+      border-top: 4px solid var(--cor-tomate);
+    }
+
+    .rodape-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.2fr;
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .rodape-sobre p {
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: #C7B5A7;
+      margin-top: 1rem;
+    }
+
+    .rodape-coluna h4 {
+      color: #FFF;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+
+    .rodape-coluna h4::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 32px;
+      height: 2px;
+      background: var(--cor-laranja);
+    }
+
+    .rodape-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .rodape-links a {
+      color: #C7B5A7;
+      font-size: 0.9rem;
+      transition: var(--transicao);
+    }
+
+    .rodape-links a:hover {
+      color: var(--cor-laranja);
+      padding-left: 4px;
+    }
+
+    .rodape-inferior {
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: 0.85rem;
+      color: #A89689;
+    }
+
+    /* =====================================================================
+       BOTÃO VOLTAR AO TOPO, TOAST E COOKIE BANNER
+       ===================================================================== */
+    .btn-topo {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 46px;
+      height: 46px;
+      background: var(--cor-tomate);
+      color: #FFF;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+      z-index: 999;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px);
+      transition: var(--transicao);
+    }
+
+    .btn-topo.visivel {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .btn-topo:hover {
+      background: var(--cor-tomate-hover);
+      transform: translateY(-3px);
+    }
+
+    .toast-notificacao {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: #271713;
+      color: #FFF;
+      padding: 0.85rem 1.6rem;
+      border-radius: 50px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      z-index: 4000;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+      pointer-events: none;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .toast-notificacao.ativo {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* Banner de Cookies */
+    .cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #FFF;
+      border-top: 2px solid var(--cor-laranja);
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.12);
+      z-index: 2500;
+      padding: 1.25rem;
+      display: none;
+    }
+
+    .cookie-banner-container {
+      max-width: var(--largura-max);
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+
+    .cookie-texto {
+      font-size: 0.9rem;
+      color: #555;
+      max-width: 820px;
+    }
+
+    .cookie-texto a {
+      color: var(--cor-tomate);
+      text-decoration: underline;
+    }
+
+    .cookie-botoes {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .btn-aceitar-cookie {
+      background: var(--cor-verde);
+      color: #FFF;
+      padding: 0.6rem 1.4rem;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.88rem;
+    }
+
+    /* =====================================================================
+       ESTILOS EXCLUSIVOS PARA IMPRESSÃO (@media print)
+       ===================================================================== */
+    @media print {
+      body {
+        background: #FFF !important;
+        color: #000 !important;
+      }
+
+      .cabecalho,
+      .hero,
+      .secao-busca,
+      .grid-categorias,
+      .secao-destaques,
+      .grid-galeria,
+      .grid-dicas,
+      .rodape,
+      .espaco-anuncio,
+      .btn-topo,
+      .cookie-banner,
+      .toast-notificacao,
+      .acoes-receita-barra,
+      .btn-fechar-modal,
+      .receitas-relacionadas-box {
+        display: none !important;
+      }
+
+      .modal-receita-backdrop {
+        position: static !important;
+        background: none !important;
+        display: block !important;
+        padding: 0 !important;
+      }
+
+      .modal-receita-container {
+        box-shadow: none !important;
+        max-width: 100% !important;
+        max-height: none !important;
+        overflow: visible !important;
+      }
+
+      .modal-receita-capa {
+        height: 220px !important;
+      }
+
+      .modal-titulo {
+        color: #000 !important;
+      }
+
+      .modal-intro {
+        background: #FFF !important;
+        border-left: 2px solid #000 !important;
+      }
+
+      .grade-rapida {
+        border: 1px solid #000 !important;
+        background: #FFF !important;
+      }
+    }
+
+    /* =====================================================================
+       RESPONSIVIDADE (TABLETS E CELULARES)
+       ===================================================================== */
+    @media (max-width: 992px) {
+      .nav-desktop {
+        display: none;
+      }
+
+      .btn-menu-mobile {
+        display: flex;
+      }
+
+      .rodape-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .rodape-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .hero {
+        padding: 4rem 1rem 5rem;
+      }
+
+      .hero-titulo {
+        font-size: 2rem;
+      }
+
+      .hero-botoes {
+        flex-direction: column;
+      }
+
+      .hero-botoes button {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .modal-receita-capa {
+        height: 220px;
+      }
+
+      .modal-receita-corpo {
+        padding: 1.25rem;
+      }
+
+      .grade-rapida {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Link de Acessibilidade para Pular Navegação -->
+  <a href="#conteudo-principal" class="sr-only">Pular direto para as receitas</a>
+
+  <!-- Barra do Topo -->
+  <div class="cabecalho-topo">
+    <div class="container">
+      🇧🇷 O maior portal de receitas caseiras, fáceis e profissionais do Brasil — 100% Gratuito!
+    </div>
+  </div>
+
+  <!-- Cabeçalho Principal -->
+  <header class="cabecalho">
+    <div class="container cabecalho-container">
+      
+      <!-- Logotipo -->
+      <a href="#inicio" class="logo" onclick="navegarPara('inicio')">
+        <div class="logo-icone" aria-hidden="true">
+          <!-- Ícone Panela / Cloche Gastronômica SVG -->
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/>
+            <path d="M4 11h16a1 1 0 0 1 1 1v1a7 7 0 0 1-7 7h-2a7 7 0 0 1-7-7v-1a1 1 0 0 1 1-1z"/>
+            <path d="M6 19v2"/>
+            <path d="M18 19v2"/>
+          </svg>
+        </div>
+        <div class="logo-texto">
+          SABORES DO BRASIL
+          <span>Receitas Fáceis & Deliciosas</span>
+        </div>
+      </a>
+
+      <!-- Menu Desktop -->
+      <nav class="nav-desktop" aria-label="Navegação Principal">
+        <a href="#inicio" onclick="navegarPara('inicio')" class="ativo" id="link-nav-inicio">Início</a>
+        <a href="#bolos" onclick="filtrarPorCategoria('bolos')">Bolos e Tortas</a>
+        <a href="#tipicas" onclick="filtrarPorCategoria('tipicas')">Comidas Típicas</a>
+        <a href="#carnes" onclick="filtrarPorCategoria('carnes')">Carnes & Churrasco</a>
+        <a href="#restaurante" onclick="filtrarPorCategoria('restaurante')">Para Restaurantes</a>
+        <a href="#sobremesas" onclick="filtrarPorCategoria('sobremesas')">Sobremesas</a>
+        <a href="#dicas" onclick="rolarPara('secao-dicas')">Dicas do Chef</a>
+        <a href="#contato" onclick="abrirInstitucional('contato')">Contato</a>
+      </nav>
+
+      <!-- Ações (Busca, Favoritos, Menu Mobile) -->
+      <div class="acoes-cabecalho">
+        <button class="btn-favoritos-topo" onclick="filtrarFavoritos()" title="Ver Minhas Receitas Favoritas" aria-label="Receitas Favoritas">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+          </svg>
+          <span class="contador-badge" id="badge-fav">0</span>
+        </button>
+
+        <button class="btn-busca-topo" onclick="focarBusca()" title="Pesquisar Receitas" aria-label="Abrir pesquisa">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+
+        <button class="btn-menu-mobile" id="btn-toggle-menu" onclick="alternarMenuMobile()" aria-label="Abrir menu de navegação" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Menu Drawer Mobile -->
+  <div class="menu-overlay" id="menu-overlay" onclick="fecharMenuMobile()"></div>
+  <aside class="menu-mobile" id="menu-mobile" aria-label="Menu Mobile">
+    <div class="menu-mobile-header">
+      <div class="logo">
+        <div class="logo-texto">SABORES DO BRASIL</div>
+      </div>
+      <button onclick="fecharMenuMobile()" aria-label="Fechar menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="menu-mobile-links">
+      <a href="#inicio" onclick="navegarPara('inicio'); fecharMenuMobile();">🏠 Início</a>
+      <a href="#bolos" onclick="filtrarPorCategoria('bolos'); fecharMenuMobile();">🍰 Bolos e Tortas</a>
+      <a href="#tipicas" onclick="filtrarPorCategoria('tipicas'); fecharMenuMobile();">🥘 Comidas Típicas</a>
+      <a href="#carnes" onclick="filtrarPorCategoria('carnes'); fecharMenuMobile();">🥩 Carnes & Churrascos</a>
+      <a href="#restaurante" onclick="filtrarPorCategoria('restaurante'); fecharMenuMobile();">🍳 Para Restaurantes</a>
+      <a href="#sobremesas" onclick="filtrarPorCategoria('sobremesas'); fecharMenuMobile();">🍮 Sobremesas e Doces</a>
+      <a href="#dicas" onclick="rolarPara('secao-dicas'); fecharMenuMobile();">👨‍🍳 Dicas e Técnicas</a>
+      <a href="#favoritos" onclick="filtrarFavoritos(); fecharMenuMobile();">❤️ Receitas Salvas</a>
+      <a href="#sobre" onclick="abrirInstitucional('sobre'); fecharMenuMobile();">ℹ️ Sobre Nós</a>
+      <a href="#contato" onclick="abrirInstitucional('contato'); fecharMenuMobile();">✉️ Fale Conosco</a>
+    </div>
+  </aside>
+
+  <!-- ESPAÇO DE ANÚNCIO SUPERIOR (ADSENSE PREPARADO) -->
+  <div class="espaco-anuncio">
+    <div class="bloco-anuncio">
+      <!-- 
+        EXEMPLO DE INTEGRAÇÃO OFICIAL GOOGLE ADSENSE:
+        Insira o bloco fornecido em sua conta oficial:
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-COLE_AQUI_O_ID_DO_EDITOR_GOOGLE_ADSENSE"
+             data-ad-slot="1234567890"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      -->
+      <p>Espaço reservado para unidade de anúncio responsivo de topo (Google AdSense)</p>
+      <code>ID do Editor: ca-pub-COLE_AQUI_O_ID_DO_EDITOR_GOOGLE_ADSENSE | Slot: TOPO_RESPONSIVO</code>
+    </div>
+  </div>
+
+  <!-- SEÇÃO HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-conteudo">
+      <div class="hero-badge">
+        ✨ Culinária 100% Brasileira & Testada
+      </div>
+      <h1 class="hero-titulo">
+        DESCUBRA RECEITAS DELICIOSAS PARA TRANSFORMAR SUA COZINHA!
+      </h1>
+      <p class="hero-subtitulo">
+        Aprenda a preparar bolos fofinhos, comidas típicas brasileiras, carnes suculentas e pratos especiais para surpreender sua família, seus convidados ou seus clientes.
+      </p>
+      <div class="hero-botoes">
+        <button class="btn-principal" onclick="rolarPara('catalogo-receitas')">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          EXPLORAR RECEITAS
+        </button>
+        <button class="btn-secundario" onclick="filtrarPorCategoria('bolos')">
+          🍰 APRENDER A FAZER BOLOS
+        </button>
+        <button class="btn-terciario" onclick="filtrarPorCategoria('restaurante')">
+          👨‍🍳 RECEITAS PARA RESTAURANTES
+        </button>
+      </div>
+
+      <div class="hero-destaques">
+        <div class="hero-stat">
+          <strong>20+</strong>
+          <span>Receitas Detalhadas</span>
+        </div>
+        <div class="hero-stat">
+          <strong>100%</strong>
+          <span>Acesso Gratuito</span>
+        </div>
+        <div class="hero-stat">
+          <strong>Fichas</strong>
+          <span>Medidas & Dicas Práticas</span>
+        </div>
+        <div class="hero-stat">
+          <strong>Profissional</strong>
+          <span>Opções para Restaurantes</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BARRA DE BUSCA E FILTROS DINÂMICOS -->
+  <div class="container secao-busca" id="conteudo-principal">
+    <div class="card-busca">
+      <div class="campo-pesquisa-wrapper">
+        <span class="campo-pesquisa-icone" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </span>
+        <input 
+          type="text" 
+          id="input-busca" 
+          class="input-pesquisa" 
+          placeholder="Busque por nome da receita, ingrediente (ex: chocolate, mandioca, frango) ou método..." 
+          aria-label="Pesquisar receita por nome ou ingrediente"
+          oninput="executarBusca()"
+        >
+        <button class="btn-limpar-busca" id="btn-limpar-busca" onclick="limparBusca()" title="Limpar pesquisa">✕</button>
+      </div>
+
+      <div class="filtros-linha">
+        <div class="filtros-botoes" role="tablist" aria-label="Filtro de Categorias">
+          <button class="btn-filtro ativo" data-cat="todas" onclick="filtrarPorCategoria('todas')">Todas</button>
+          <button class="btn-filtro" data-cat="bolos" onclick="filtrarPorCategoria('bolos')">Bolos & Tortas</button>
+          <button class="btn-filtro" data-cat="tipicas" onclick="filtrarPorCategoria('tipicas')">Comidas Típicas</button>
+          <button class="btn-filtro" data-cat="carnes" onclick="filtrarPorCategoria('carnes')">Carnes & Churrascos</button>
+          <button class="btn-filtro" data-cat="restaurante" onclick="filtrarPorCategoria('restaurante')">Para Restaurantes</button>
+          <button class="btn-filtro" data-cat="sobremesas" onclick="filtrarPorCategoria('sobremesas')">Sobremesas</button>
+        </div>
+
+        <div class="filtro-selecao-extra">
+          <label for="select-dificuldade" class="sr-only">Filtrar por Dificuldade</label>
+          <select id="select-dificuldade" class="select-dificuldade" onchange="executarBusca()">
+            <option value="todas">Dificuldade: Todas</option>
+            <option value="Fácil">Fácil</option>
+            <option value="Médio">Médio</option>
+            <option value="Avançado">Avançado</option>
+          </select>
+
+          <label for="select-tempo" class="sr-only">Filtrar por Tempo de Preparo</label>
+          <select id="select-tempo" class="select-dificuldade" onchange="executarBusca()">
+            <option value="todos">Tempo: Qualquer</option>
+            <option value="30">Até 30 minutos</option>
+            <option value="60">Até 60 minutos</option>
+            <option value="120">Mais de 60 minutos</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="resultado-contador" id="contador-resultados">
+        Mostrando todas as 20 receitas disponíveis
+      </div>
+    </div>
+  </div>
+
+  <!-- SEÇÃO 1: CATEGORIAS PRINCIPAIS (CARTÕES ILUSTRADOS) -->
+  <section class="secao">
+    <div class="container">
+      <div class="secao-topo">
+        <span class="secao-tag">Navegue por Categoria</span>
+        <h2 class="secao-titulo">Tradição, Sabor e Variedade</h2>
+        <p class="secao-descricao">
+          Do café da tarde ao almoço de domingo e pratos comerciais lucrativos. Escolha a categoria ideal para sua refeição.
+        </p>
+      </div>
+
+      <div class="grid-categorias">
+        <!-- Cat 1 -->
+        <article class="card-categoria" onclick="filtrarPorCategoria('bolos')">
+          <div class="categoria-imagem-wrapper">
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&auto=format&fit=crop&q=80" alt="Bolos caseiros e tortas doces" loading="lazy">
+            <span class="categoria-badge">5 Receitas</span>
+          </div>
+          <div class="categoria-corpo">
+            <h3 class="categoria-titulo">Bolos e Tortas</h3>
+            <p class="categoria-desc">Bolos fofinhos de liquidificador, bolo de cenoura, milho cremoso e tortas crocantes para o café.</p>
+            <span class="categoria-link">Explorar bolos →</span>
+          </div>
+        </article>
+
+        <!-- Cat 2 -->
+        <article class="card-categoria" onclick="filtrarPorCategoria('tipicas')">
+          <div class="categoria-imagem-wrapper">
+            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&auto=format&fit=crop&q=80" alt="Pratos típicos e regionais brasileiros" loading="lazy">
+            <span class="categoria-badge">6 Receitas</span>
+          </div>
+          <div class="categoria-corpo">
+            <h3 class="categoria-titulo">Comidas Típicas</h3>
+            <p class="categoria-desc">Feijoada autêntica, baião de dois, moqueca baiana, escondidinho e o clássico pão de queijo mineiro.</p>
+            <span class="categoria-link">Explorar pratos típicos →</span>
+          </div>
+        </article>
+
+        <!-- Cat 3 -->
+        <article class="card-categoria" onclick="filtrarPorCategoria('carnes')">
+          <div class="categoria-imagem-wrapper">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&auto=format&fit=crop&q=80" alt="Carnes assadas e churrasco" loading="lazy">
+            <span class="categoria-badge">5 Receitas</span>
+          </div>
+          <div class="categoria-corpo">
+            <h3 class="categoria-titulo">Carnes & Churrascos</h3>
+            <p class="categoria-desc">Costela que desmancha no osso, picanha no ponto nobre, pernil suíno e carne de panela aromática.</p>
+            <span class="categoria-link">Explorar carnes →</span>
+          </div>
+        </article>
+
+        <!-- Cat 4 -->
+        <article class="card-categoria" onclick="filtrarPorCategoria('restaurante')">
+          <div class="categoria-imagem-wrapper">
+            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=600&auto=format&fit=crop&q=80" alt="Receitas para restaurantes e delivery" loading="lazy">
+            <span class="categoria-badge">3 Fichas Técnicas</span>
+          </div>
+          <div class="categoria-corpo">
+            <h3 class="categoria-titulo">Para Restaurantes</h3>
+            <p class="categoria-desc">Pratos executivos, marmitas de sucesso, estrogonofe padronizado, parmegiana e lasanha de alto rendimento.</p>
+            <span class="categoria-link">Explorar pratos comerciais →</span>
+          </div>
+        </article>
+
+        <!-- Cat 5 -->
+        <article class="card-categoria" onclick="filtrarPorCategoria('sobremesas')">
+          <div class="categoria-imagem-wrapper">
+            <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?w=600&auto=format&fit=crop&q=80" alt="Sobremesas e doces tradicionais" loading="lazy">
+            <span class="categoria-badge">4 Receitas</span>
+          </div>
+          <div class="categoria-corpo">
+            <h3 class="categoria-titulo">Sobremesas & Doces</h3>
+            <p class="categoria-desc">Pudim de leite condensado sem furinhos, brigadeiro gourmet cremoso, mousse e pavê festivo.</p>
+            <span class="categoria-link">Explorar sobremesas →</span>
+          </div>
+        </article>
+
+        <!-- Cat 6 (Dicas) -->
+        <article class="card-categoria" onclick="rolarPara('secao-dicas')">
+          <div class="categoria-imagem-wrapper">
+            <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=600&auto=format&fit=crop&q=80" alt="Técnicas de cozinha e dicas do chef" loading="lazy">
+            <span class="categoria-badge">6 Artigos</span>
+          </div>
+          <div class="categoria-corpo">
+            <h3 class="categoria-titulo">Dicas de Cozinha</h3>
+            <p class="categoria-desc">Aprenda a deixar o bolo fofinho sem solar, calcular porções grandes, arroz soltinho e conservação segura.</p>
+            <span class="categoria-link">Ler artigos práticos →</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 2: CATÁLOGO COMPLETO DE RECEITAS (FILTRÁVEL) -->
+  <section class="secao" id="catalogo-receitas" style="background: #FAF6F0;">
+    <div class="container">
+      <div class="secao-topo">
+        <span class="secao-tag" id="tag-catalogo-atual">Catálogo Geral</span>
+        <h2 class="secao-titulo" id="titulo-catalogo-atual">Todas as Receitas</h2>
+        <p class="secao-descricao" id="desc-catalogo-atual">
+          Selecione qualquer prato abaixo para conferir a lista completa de ingredientes, tempo, rendimento, passo a passo e dicas exclusivas.
+        </p>
+      </div>
+
+      <!-- Grade dinâmica de receitas -->
+      <div class="grid-receitas" id="grade-receitas-container">
+        <!-- Renderizado dinamicamente via JS com dados locais -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ESPAÇO DE ANÚNCIO DO MEIO DO CONTEÚDO (GOOGLE ADSENSE) -->
+  <div class="espaco-anuncio">
+    <div class="bloco-anuncio">
+      <p>Espaço reservado para unidade de anúncio retangular entre seções (Google AdSense)</p>
+      <code>ID do Editor: ca-pub-COLE_AQUI_O_ID_DO_EDITOR_GOOGLE_ADSENSE | Slot: MEIO_CONTEUDO_728x90</code>
+    </div>
+  </div>
+
+  <!-- SEÇÃO 3: GALERIA GASTRONÔMICA -->
+  <section class="secao">
+    <div class="container">
+      <div class="secao-topo">
+        <span class="secao-tag">Inspiração Visual</span>
+        <h2 class="secao-titulo">Galeria Gastronômica Brasileira</h2>
+        <p class="secao-descricao">
+          Cores, texturas e sabores que representam o melhor da nossa cultura gastronômica.
+        </p>
+      </div>
+
+      <div class="grid-galeria">
+        <div class="item-galeria" onclick="abrirReceitaPorId(1)">
+          <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500&auto=format&fit=crop&q=80" alt="Bolo de chocolate com cobertura" loading="lazy">
+          <div class="legenda-galeria">Bolo de Chocolate Fofinho</div>
+        </div>
+        <div class="item-galeria" onclick="abrirReceitaPorId(6)">
+          <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=500&auto=format&fit=crop&q=80" alt="Feijoada completa com couve e laranjas" loading="lazy">
+          <div class="legenda-galeria">Feijoada Tradicional</div>
+        </div>
+        <div class="item-galeria" onclick="abrirReceitaPorId(12)">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=500&auto=format&fit=crop&q=80" alt="Costela suculenta assada no osso" loading="lazy">
+          <div class="legenda-galeria">Costela Bovina Assada</div>
+        </div>
+        <div class="item-galeria" onclick="abrirReceitaPorId(10)">
+          <img src="https://images.unsplash.com/photo-1598110756774-8b654e9959e4?w=500&auto=format&fit=crop&q=80" alt="Pão de queijo quentinho saindo do forno" loading="lazy">
+          <div class="legenda-galeria">Pão de Queijo Mineiro</div>
+        </div>
+        <div class="item-galeria" onclick="abrirReceitaPorId(20)">
+          <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?w=500&auto=format&fit=crop&q=80" alt="Pudim de leite condensado com calda dourada" loading="lazy">
+          <div class="legenda-galeria">Pudim de Leite Sem Furinhos</div>
+        </div>
+        <div class="item-galeria" onclick="abrirReceitaPorId(17)">
+          <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=500&auto=format&fit=crop&q=80" alt="Strogonoff cremoso com batata palha" loading="lazy">
+          <div class="legenda-galeria">Strogonoff Profissional</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 4: DICAS DO CHEF (ARTIGOS EDUCATIVOS COMPLETOS) -->
+  <section class="secao" id="secao-dicas" style="background: #FFFDF9;">
+    <div class="container">
+      <div class="secao-topo">
+        <span class="secao-tag">Técnica & Conhecimento</span>
+        <h2 class="secao-titulo">Dicas do Chef e Segredos de Cozinha</h2>
+        <p class="secao-descricao">
+          Artigos completos para aprimorar sua prática na cozinha, economizar tempo, evitar desperdício e garantir receitas impecáveis.
+        </p>
+      </div>
+
+      <div class="grid-dicas" id="grade-artigos-container">
+        <!-- Renderizado via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ESPAÇO DE ANÚNCIO INFERIOR (ADSENSE PREPARADO) -->
+  <div class="espaco-anuncio">
+    <div class="bloco-anuncio">
+      <p>Espaço reservado para unidade de anúncio responsivo pré-rodapé (Google AdSense)</p>
+      <code>ID do Editor: ca-pub-COLE_AQUI_O_ID_DO_EDITOR_GOOGLE_ADSENSE | Slot: INFERIOR_RODAPE</code>
+    </div>
+  </div>
+
+  <!-- RODAPÉ COMPLETO -->
+  <footer class="rodape">
+    <div class="container">
+      <div class="rodape-grid">
+        <!-- Coluna 1 -->
+        <div class="rodape-sobre">
+          <div class="logo" style="color: #FFF;">
+            <div class="logo-icone">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/>
+                <path d="M4 11h16a1 1 0 0 1 1 1v1a7 7 0 0 1-7 7h-2a7 7 0 0 1-7-7v-1a1 1 0 0 1 1-1z"/>
+              </svg>
+            </div>
+            SABORES DO BRASIL
+          </div>
+          <p>
+            O portal Sabores do Brasil nasceu da paixão por compartilhar a autêntica culinária caseira e comercial brasileira. Nosso compromisso é entregar receitas testadas, detalhadas e sem mistérios para cozinheiros iniciantes, experientes e donos de restaurantes.
+          </p>
+        </div>
+
+        <!-- Coluna 2 -->
+        <div class="rodape-coluna">
+          <h4>Categorias</h4>
+          <ul class="rodape-links">
+            <li><a href="#bolos" onclick="filtrarPorCategoria('bolos')">Bolos e Tortas</a></li>
+            <li><a href="#tipicas" onclick="filtrarPorCategoria('tipicas')">Comidas Típicas</a></li>
+            <li><a href="#carnes" onclick="filtrarPorCategoria('carnes')">Carnes & Churrascos</a></li>
+            <li><a href="#restaurante" onclick="filtrarPorCategoria('restaurante')">Para Restaurantes</a></li>
+            <li><a href="#sobremesas" onclick="filtrarPorCategoria('sobremesas')">Sobremesas e Doces</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 3 -->
+        <div class="rodape-coluna">
+          <h4>Artigos Úteis</h4>
+          <ul class="rodape-links">
+            <li><a href="#dicas" onclick="abrirArtigoPorId(1)">Segredos do Bolo Fofinho</a></li>
+            <li><a href="#dicas" onclick="abrirArtigoPorId(2)">Cálculo de Porções Grandes</a></li>
+            <li><a href="#dicas" onclick="abrirArtigoPorId(3)">Guia de Cortes de Carne</a></li>
+            <li><a href="#dicas" onclick="abrirArtigoPorId(5)">O Ponto do Arroz Soltinho</a></li>
+            <li><a href="#dicas" onclick="abrirArtigoPorId(6)">Higiene e Segurança Alimentar</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 4: Institucional -->
+        <div class="rodape-coluna">
+          <h4>Institucional</h4>
+          <ul class="rodape-links">
+            <li><a href="#sobre" onclick="abrirInstitucional('sobre')">Sobre Nós</a></li>
+            <li><a href="#contato" onclick="abrirInstitucional('contato')">Fale Conosco</a></li>
+            <li><a href="#privacidade" onclick="abrirInstitucional('privacidade')">Política de Privacidade</a></li>
+            <li><a href="#cookies" onclick="abrirInstitucional('cookies')">Política de Cookies</a></li>
+            <li><a href="#termos" onclick="abrirInstitucional('termos')">Termos de Uso</a></li>
+            <li><a href="#nutricional" onclick="abrirInstitucional('nutricional')">Aviso Nutricional</a></li>
+            <li><a href="#adstxt" onclick="abrirInstitucional('adstxt')">Guia ads.txt AdSense</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="rodape-inferior">
+        <div>
+          &copy; <span id="ano-atual">2026</span> Sabores do Brasil — Todos os direitos reservados. Feito com amor pela culinária brasileira.
+        </div>
+        <div>
+          Conteúdo culinário independente e educativo para o público geral.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =====================================================================
+       MODAL: VISUALIZAÇÃO COMPLETA DA RECEITA
+       ===================================================================== -->
+  <div class="modal-receita-backdrop" id="modal-receita" role="dialog" aria-modal="true" aria-labelledby="modal-rec-titulo" onclick="fecharModalReceitaSeBackdrop(event)">
+    <div class="modal-receita-container">
+      <button class="btn-fechar-modal" onclick="fecharModalReceita()" aria-label="Fechar receita">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="modal-receita-capa">
+        <img id="modal-rec-img" src="" alt="">
+        <div class="modal-receita-overlay">
+          <span class="modal-tag" id="modal-rec-cat">Categoria</span>
+          <h2 class="modal-titulo" id="modal-rec-titulo">Nome da Receita</h2>
+        </div>
+      </div>
+
+      <div class="modal-receita-corpo">
+        <p class="modal-intro" id="modal-rec-intro"></p>
+
+        <!-- Barra de Ações (Imprimir, Favoritar, Compartilhar, Copiar link) -->
+        <div class="acoes-receita-barra">
+          <button class="btn-acao-rec" id="btn-modal-fav" onclick="alternarFavoritoAtual()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+            </svg>
+            <span id="texto-modal-fav">Salvar nos Favoritos</span>
+          </button>
+
+          <button class="btn-acao-rec" onclick="imprimirReceita()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 6 2 18 2 18 9"></polyline>
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+              <rect x="6" y="14" width="12" height="8"></rect>
+            </svg>
+            Imprimir Receita
+          </button>
+
+          <button class="btn-acao-rec" onclick="compartilharReceita()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="18" cy="5" r="3"></circle>
+              <circle cx="6" cy="12" r="3"></circle>
+              <circle cx="18" cy="19" r="3"></circle>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+            </svg>
+            Compartilhar
+          </button>
+
+          <button class="btn-acao-rec" onclick="copiarLinkReceita()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+            </svg>
+            Copiar Link
+          </button>
+        </div>
+
+        <!-- Grade de Informações Rápidas -->
+        <div class="grade-rapida">
+          <div class="item-rapido">
+            <span>Preparo</span>
+            <strong id="modal-rec-preparo">-</strong>
+          </div>
+          <div class="item-rapido">
+            <span>Cozimento</span>
+            <strong id="modal-rec-cozimento">-</strong>
+          </div>
+          <div class="item-rapido">
+            <span>Tempo Total</span>
+            <strong id="modal-rec-tempo">-</strong>
+          </div>
+          <div class="item-rapido">
+            <span>Rendimento</span>
+            <strong id="modal-rec-rendimento">-</strong>
+          </div>
+          <div class="item-rapido">
+            <span>Dificuldade</span>
+            <strong id="modal-rec-dificuldade">-</strong>
+          </div>
+        </div>
+
+        <!-- Ingredientes -->
+        <div class="secao-conteudo-rec">
+          <h3>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--cor-tomate)" stroke-width="2"><path d="M6 2v14a6 6 0 0 0 12 0V2"></path><line x1="6" y1="6" x2="18" y2="6"></line><line x1="6" y1="10" x2="18" y2="10"></line></svg>
+            Ingredientes (Medidas Exatas)
+          </h3>
+          <ul class="lista-ingredientes" id="modal-rec-ingredientes"></ul>
+        </div>
+
+        <!-- Modo de Preparo -->
+        <div class="secao-conteudo-rec">
+          <h3>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--cor-tomate)" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            Modo de Preparo Passo a Passo
+          </h3>
+          <ol class="passos-preparo" id="modal-rec-passos"></ol>
+        </div>
+
+        <!-- Dicas do Cozinheiro -->
+        <div class="caixa-destaque caixa-dica" id="box-rec-dica">
+          <strong>💡 Dica do Chef para o Ponto Perfeito:</strong>
+          <span id="modal-rec-dica"></span>
+        </div>
+
+        <!-- Erros Comuns e Como Evitar -->
+        <div class="caixa-destaque caixa-erros" id="box-rec-erros">
+          <strong>⚠️ Erros Comuns a Evitar:</strong>
+          <span id="modal-rec-erros"></span>
+        </div>
+
+        <!-- Conservação e Armazenamento Seguro -->
+        <div class="caixa-destaque caixa-conservacao" id="box-rec-conservacao">
+          <strong>🧊 Conservação & Reaquecimento:</strong>
+          <span id="modal-rec-conservacao"></span>
+        </div>
+
+        <!-- Substituições Viáveis -->
+        <div class="caixa-destaque" style="background: #F3E5F5; border-left: 4px solid #8E24AA; color: #4A148C;">
+          <strong>🔄 Substituições de Ingredientes:</strong>
+          <span id="modal-rec-substituicoes"></span>
+        </div>
+
+        <!-- Tabela Nutricional Estimada -->
+        <div class="tabela-nutricional-box">
+          <strong style="color: var(--cor-marrom); font-size: 1rem;">📊 Informações Nutricionais Estimadas (Por Porção)</strong>
+          <table class="tabela-nutri">
+            <thead>
+              <tr>
+                <th>Calorias</th>
+                <th>Carboidratos</th>
+                <th>Proteínas</th>
+                <th>Gorduras Totais</th>
+                <th>Fibras</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td id="modal-nutri-cal">-</td>
+                <td id="modal-nutri-carb">-</td>
+                <td id="modal-nutri-prot">-</td>
+                <td id="modal-nutri-gord">-</td>
+                <td id="modal-nutri-fib">-</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="aviso-nutri">
+            * Valores calculados com base em tabelas de composição nutricional para ingredientes de referência. Podem variar conforme marcas e cortes específicos.
+          </p>
+        </div>
+
+        <!-- Receitas Relacionadas -->
+        <div class="receitas-relacionadas-box">
+          <h3 style="font-size: 1.25rem; color: var(--cor-marrom);">Você Também Vai Amar Preparar:</h3>
+          <div class="grade-relacionadas" id="modal-rec-relacionadas"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       MODAL: ARTIGO EDUCATIVO COMPLETO (DICAS DO CHEF)
+       ===================================================================== -->
+  <div class="modal-artigo-backdrop" id="modal-artigo" role="dialog" aria-modal="true" onclick="fecharModalArtigoSeBackdrop(event)">
+    <div class="modal-artigo-container">
+      <button class="btn-fechar-modal" onclick="fecharModalArtigo()" aria-label="Fechar artigo">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="artigo-conteudo" id="artigo-conteudo-interno"></div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       MODAL: PÁGINAS INSTITUCIONAIS (SOBRE, CONTATO, POLÍTICAS, ADS.TXT)
+       ===================================================================== -->
+  <div class="modal-institucional-backdrop" id="modal-institucional" role="dialog" aria-modal="true" onclick="fecharModalInstitucionalSeBackdrop(event)">
+    <div class="modal-institucional-container">
+      <button class="btn-fechar-modal" onclick="fecharModalInstitucional()" aria-label="Fechar página">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="institucional-conteudo" id="institucional-conteudo-interno"></div>
+    </div>
+  </div>
+
+  <!-- BOTÃO FLUTUANTE VOLTAR AO TOPO -->
+  <button class="btn-topo" id="btn-topo" onclick="voltarAoTopo()" title="Voltar ao início da página" aria-label="Voltar ao topo">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- TOAST DE NOTIFICAÇÃO -->
+  <div class="toast-notificacao" id="toast-notificacao" role="alert" aria-live="polite">
+    <span id="toast-mensagem">Notificação</span>
+  </div>
+
+  <!-- BANNER DE COOKIES (LGPD / GOOGLE ADSENSE COMPLIANCE) -->
+  <div class="cookie-banner" id="cookie-banner">
+    <div class="cookie-banner-container">
+      <div class="cookie-texto">
+        Utilizamos cookies e tecnologias semelhantes para aprimorar sua experiência de navegação, analisar o tráfego do portal e exibir anúncios personalizados em conformidade com o Google AdSense e a LGPD. Saiba mais em nossa 
+        <a href="#privacidade" onclick="abrirInstitucional('privacidade')">Política de Privacidade</a> e 
+        <a href="#cookies" onclick="abrirInstitucional('cookies')">Política de Cookies</a>.
+      </div>
+      <div class="cookie-botoes">
+        <button class="btn-aceitar-cookie" onclick="aceitarCookies()">Aceitar e Continuar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       CÓDIGO JAVASCRIPT PURO EMBUTIDO (SEM DEPENDÊNCIAS EXTERNAS)
+       ===================================================================== -->
+  <script>
+    /* =====================================================================
+       BANCO DE DADOS LOCAL DE RECEITAS COMPLETAS (20 RECEITAS ORIGINAIS)
+       ===================================================================== */
+    const BANCO_RECEITAS = [
+      // 1. Bolos e Tortas
+      {
+        id: 1,
+        slug: "bolo-de-chocolate-fofinho",
+        categoria: "bolos",
+        nomeCategoria: "Bolos e Tortas",
+        titulo: "Bolo de Chocolate Fofinho com Calda Cremosa",
+        resumo: "Massa alta, aerada e úmida feita com cacau 50%, finalizada com cobertura espessa de chocolate que penetra na massa sem ressecar.",
+        imagem: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&auto=format&fit=crop&q=80",
+        preparo: "20 min",
+        cozimento: "40 min",
+        tempoTotal: "60 min",
+        tempoMinutos: 60,
+        rendimento: "14 fatias generosas",
+        dificuldade: "Fácil",
+        calorias: "285 kcal",
+        carboidratos: "42g",
+        proteinas: "4.8g",
+        gorduras: "11g",
+        fibras: "2.5g",
+        intro: "O bolo de chocolate perfeito exige o equilíbrio entre a umidade da gordura vegetal e o poder alcalino do cacau. Esta receita tradicional entrega uma massa que não esfarela e derrete na boca.",
+        ingredientes: [
+          "3 ovos médios em temperatura ambiente",
+          "1 e 1/2 xícara de açúcar refinado ou cristal (270g)",
+          "1/2 xícara de óleo de girassol ou milho (120ml)",
+          "1 xícara de leite integral morno (240ml)",
+          "1 xícara de cacau ou chocolate em pó 50% (90g)",
+          "2 xícaras de farinha de trigo peneirada (280g)",
+          "1 colher de sopa de fermento químico em pó (15g)",
+          "1 pitada de sal refinado (realça o sabor do cacau)",
+          "Calda: 1 lata de leite condensado (395g), 1 caixinha de creme de leite (200g) e 4 colheres de cacau 50%"
+        ],
+        passos: [
+          "Pré-aqueça o forno a 180°C e unte uma forma redonda com furo central (22cm) com manteiga e cacau em pó (evita manchas brancas na crosta).",
+          "Em uma tigela ou batedeira, bata os ovos inteiros com o açúcar até formar um creme esbranquiçado e volumoso (cerca de 3 a 4 minutos).",
+          "Adicione o óleo vegetal e o cacau em pó peneirado, misturando suavemente com um fouet até homogeneizar completamente.",
+          "Alterne a adição da farinha de trigo peneirada com o leite morno, mexendo de baixo para cima sem bater em excesso para não desenvolver o glúten.",
+          "Por último, adicione a pitada de sal e o fermento químico, incorporando delicadamente.",
+          "Despeje na forma e asse por 35 a 40 minutos. Faça o teste do palito no centro: deve sair seco e limpo.",
+          "Para a cobertura: misture os ingredientes na panela em fogo médio por 6 minutos até encorpar. Despeje morna sobre o bolo desenformado."
+        ],
+        dicaChef: "O segredo para um bolo que não fica seco é usar leite morno (não fervente) e cacau com teor de 50%. Se usar achocolatado comum, reduza o açúcar pela metade para evitar sabor excessivamente doce.",
+        errosComuns: "Nunca abra a porta do forno antes de 30 minutos de cozimento, pois o choque térmico faz a massa colapsar no centro. Bater a farinha de trigo com vigor na batedeira também torna o bolo pesado.",
+        conservacao: "Conserve em boleira fechada em temperatura ambiente por até 3 dias. Pode ser congelado em fatias embaladas em plástico filme por até 60 dias.",
+        substituicoes: "O óleo pode ser substituído por manteiga derretida na mesma proporção. O leite comum pode ser trocado por leite vegetal (como leite de aveia ou amêndoas)."
+      },
+      {
+        id: 2,
+        slug: "bolo-de-cenoura-com-brigadeiro",
+        categoria: "bolos",
+        nomeCategoria: "Bolos e Tortas",
+        titulo: "Bolo de Cenoura Fofinho com Casquinha Crocante de Brigadeiro",
+        resumo: "A proporção científica exata entre cenouras frescas e farinha para nunca solar, coberto com brigadeiro cremoso que forma casquinha.",
+        imagem: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&auto=format&fit=crop&q=80",
+        preparo: "15 min",
+        cozimento: "40 min",
+        tempoTotal: "55 min",
+        tempoMinutos: 55,
+        rendimento: "16 porções",
+        dificuldade: "Fácil",
+        calorias: "310 kcal",
+        carboidratos: "48g",
+        proteinas: "4.2g",
+        gorduras: "12g",
+        fibras: "1.8g",
+        intro: "O maior clássico do café da tarde dos lares brasileiros. O maior erro nesta receita é o excesso de cenoura, que adiciona peso e água desnecessários à massa.",
+        ingredientes: [
+          "3 cenouras médias descascadas e picadas em rodelas (aproximadamente 250g no total)",
+          "4 ovos médios inteiros",
+          "1 xícara de óleo vegetal (240ml)",
+          "1 e 1/2 xícara de açúcar refinado (270g)",
+          "2 xícaras de farinha de trigo peneirada (280g)",
+          "1 colher de sopa de fermento químico (15g)",
+          "1 pitada de sal",
+          "Cobertura: 1 lata de leite condensado, 1 colher de manteiga, 3 colheres de chocolate em pó e 50ml de leite"
+        ],
+        passos: [
+          "Preaqueça o forno a 180°C e unte uma assadeira retangular (20x30cm) com manteiga e farinha de trigo.",
+          "Pese as cenouras para garantir que não ultrapassem 270g. Bata no liquidificador as cenouras, os ovos, o óleo e o açúcar por 4 minutos até criar uma emulsão totalmente lisa.",
+          "Transfira a mistura líquida para uma tigela funda.",
+          "Peneire a farinha de trigo aos poucos sobre o líquido, misturando com fouet até sumir qualquer grumo.",
+          "Junte a pitada de sal e o fermento, mexendo apenas até incorporar.",
+          "Asse em forno médio por cerca de 40 a 45 minutos. Espete um palito para conferir.",
+          "Para a cobertura: ferva todos os ingredientes da calda até ponto de brigadeiro mole e espalhe ainda quente sobre o bolo."
+        ],
+        dicaChef: "Pese as cenouras! Colocar cenouras gigantes é a razão número 1 para o bolo de cenoura solar ou ficar com textura de pudim borrachudo.",
+        errosComuns: "Bater a farinha no liquidificador. A farinha deve ser misturada delicadamente à mão para manter o ar na massa.",
+        conservacao: "Mantém-se fresco por 3 dias em temperatura ambiente em recipiente tampado.",
+        substituicoes: "Pode ser feito com açúcar demerara triturado ou metade de farinha de aveia com farinha de trigo."
+      },
+      {
+        id: 3,
+        slug: "bolo-de-milho-cremoso-caipira",
+        categoria: "bolos",
+        nomeCategoria: "Bolos e Tortas",
+        titulo: "Bolo de Milho Cremoso Caipira (De Liquidificador)",
+        resumo: "Receita rápida de liquidificador que forma três camadas naturais: crosta fina, miolo fofo e centro cremoso como pamonha de feira.",
+        imagem: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&auto=format&fit=crop&q=80",
+        preparo: "10 min",
+        cozimento: "50 min",
+        tempoTotal: "60 min",
+        tempoMinutos: 60,
+        rendimento: "12 fatias",
+        dificuldade: "Fácil",
+        calorias: "260 kcal",
+        carboidratos: "38g",
+        proteinas: "5.1g",
+        gorduras: "10g",
+        fibras: "2.1g",
+        intro: "Inspirado nas receitas caipiras de São Paulo, Goiás e Minas Gerais. Pode ser feito com milho verde fresco debulhado da espiga ou em conserva de boa procedência.",
+        ingredientes: [
+          "1 lata de milho verde escorrida (ou 3 espigas debulhadas)",
+          "1 lata de leite condensado (395g)",
+          "1 garrafinha de leite de coco (200ml)",
+          "3 ovos caipiras ou médios",
+          "2 colheres de sopa de manteiga em ponto de pomada (40g)",
+          "1 xícara de fubá mimoso ou flocão de milho",
+          "50g de queijo parmesão ralado (dá o contraste salgado perfeito)",
+          "1 colher de sopa de fermento químico em pó"
+        ],
+        passos: [
+          "Preaqueça o forno a 180°C e unte bem uma forma com manteiga e fubá.",
+          "No liquidificador, bata o milho, o leite de coco, os ovos e a manteiga por cerca de 3 minutos até triturar bem os grãos de milho.",
+          "Adicione o leite condensado, o queijo ralado e o fubá. Bata por mais 1 minuto.",
+          "Por último, acrescente o fermento em pó e pulse rapidamente apenas para misturar.",
+          "A massa é bastante líquida, o que é completamente normal nesta receita.",
+          "Despeje na forma e asse por 45 a 50 minutos até que as bordas fiquem douradas e o centro firme ao toque leve.",
+          "Aguarde amornar antes de desenformar para não quebrar a camada cremosa."
+        ],
+        dicaChef: "O queijo parmesão ralado é indispensável: ele corta o excesso de açúcar do leite condensado e confere aroma de fazenda.",
+        errosComuns: "Desenformar o bolo ainda fervendo. Por ser cremoso no centro, ele precisa descansar 20 minutos para assentar a estrutura.",
+        conservacao: "Na geladeira por até 5 dias em pote fechado. Fica delicioso servido gelado ou reaquecido 15 segundos no micro-ondas.",
+        substituicoes: "O queijo parmesão pode ser substituído por queijo minas curado ralado ou queijo meia cura."
+      },
+      {
+        id: 4,
+        slug: "bolo-de-fuba-com-erva-doce",
+        categoria: "bolos",
+        nomeCategoria: "Bolos e Tortas",
+        titulo: "Bolo de Fubá Tradicional com Erva-Doce da Vovó",
+        resumo: "Massa leve, sequinha e perfumada, ideal para acompanhar um café coado na hora. O toque sutil de erva-doce desperta memórias afetivas.",
+        imagem: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&auto=format&fit=crop&q=80",
+        preparo: "15 min",
+        cozimento: "40 min",
+        tempoTotal: "55 min",
+        tempoMinutos: 55,
+        rendimento: "14 fatias",
+        dificuldade: "Fácil",
+        calorias: "230 kcal",
+        carboidratos: "36g",
+        proteinas: "3.9g",
+        gorduras: "8g",
+        fibras: "1.9g",
+        intro: "A autêntica receita de interior brasileiro. Feito com fubá mimoso fininho para garantir leveza e evitar textura excessivamente arenosa.",
+        ingredientes: [
+          "3 ovos médios",
+          "1 e 1/2 xícara de açúcar refinado",
+          "1 xícara de óleo vegetal ou 3 colheres de sopa de banha/manteiga",
+          "1 xícara de leite integral morno",
+          "1 xícara de fubá mimoso peneirado",
+          "1 xícara de farinha de trigo peneirada",
+          "1 colher de sopa de sementes de erva-doce ligeiramente esfregadas nas mãos",
+          "1 colher de sopa de fermento químico"
+        ],
+        passos: [
+          "Aqueça o forno a 180°C e unte a forma de furo central com manteiga e fubá.",
+          "Bata no liquidificador os ovos, o leite, o óleo e o açúcar por 2 minutos.",
+          "Despeje em uma tigela e acrescente o fubá e a farinha peneirados, mexendo com batedor de arame.",
+          "Junte as sementes de erva-doce e o fermento, misturando suavemente.",
+          "Asse por aproximadamente 40 minutos até dourar uniformemente.",
+          "Deixe amornar e polvilhe açúcar com canela se desejar uma finalização especial."
+        ],
+        dicaChef: "Esfregue as sementes de erva-doce entre as palmas das mãos antes de colocar na massa: o calor e atrito liberam os óleos essenciais aromáticos.",
+        errosComuns: "Usar fubá grosso de polenta em vez de fubá mimoso fino, o que deixa o bolo excessivamente seco e áspero.",
+        conservacao: "Até 4 dias em temperatura ambiente em recipiente bem vedado.",
+        substituicoes: "Se não gostar de erva-doce, substitua por raspas de casca de laranja ou cubinhos de goiabada passados na farinha."
+      },
+      {
+        id: 5,
+        slug: "torta-de-limao-com-merengue",
+        categoria: "bolos",
+        nomeCategoria: "Bolos e Tortas",
+        titulo: "Torta de Limão Tradicional com Merengue Suíço",
+        resumo: "Massa crocante que derrete na boca, recheio cremoso e azedinho de limão taiti, coroada com merengue maçaricado brilhante.",
+        imagem: "https://images.unsplash.com/photo-1519869325930-281384150729?w=800&auto=format&fit=crop&q=80",
+        preparo: "30 min",
+        cozimento: "15 min",
+        tempoTotal: "45 min",
+        tempoMinutos: 45,
+        rendimento: "10 porções",
+        dificuldade: "Médio",
+        calorias: "340 kcal",
+        carboidratos: "46g",
+        proteinas: "5.5g",
+        gorduras: "15g",
+        fibras: "1.1g",
+        intro: "Uma das tortas mais pedidas em confeitarias e restaurantes pelo contraste perfeito entre o doce do merengue e a acidez fresca do limão.",
+        ingredientes: [
+          "Massa: 200g de biscoito maisena triturado e 100g de manteiga sem sal derretida",
+          "Recheio: 2 latas de leite condensado (790g), 1 caixinha de creme de leite (200g) e suco coado de 4 limões taiti grandes (cerca de 150ml)",
+          "Cobertura: 3 claras de ovos, 1 xícara de açúcar refinado e raspas da casca de 1 limão para decorar"
+        ],
+        passos: [
+          "Misture o biscoito triturado com a manteiga até ponto de areia úmida. Forre o fundo e as laterais de uma forma de fundo removível (22cm).",
+          "Asse a base a 180°C por 10 a 12 minutos até dourar levemente. Deixe esfriar.",
+          "Para o recheio: bata no liquidificador o leite condensado, o creme de leite e adicione o suco de limão aos poucos. A acidez talha e engrossa naturalmente o creme.",
+          "Despeje o recheio sobre a base assada fria e leve à geladeira por no mínimo 3 horas.",
+          "Para o merengue suíço: em banho-maria, mexa as claras com o açúcar até dissolver os grãos (cerca de 60°C). Bata imediatamente na batedeira em velocidade alta até formar picos firmes e brilhantes.",
+          "Cubra a torta com o merengue e doure com maçarico culinário ou no forno no modo grill por 3 minutos."
+        ],
+        dicaChef: "Adicione o suco de limão aos poucos enquanto bate: a reação química com as proteínas do leite cria um creme firme sem necessidade de gelatina.",
+        errosComuns: "Raspar a parte branca da casca do limão, o que deixa o preparo com gosto amargo indesejado.",
+        conservacao: "Mantenha na geladeira por até 4 dias. Não congelar com o merengue.",
+        substituicoes: "Pode ser feita com limão siciliano ou maracujá concentrado."
+      },
+
+      // 2. Comidas Típicas Brasileiras
+      {
+        id: 6,
+        slug: "feijoada-tradicional-completa",
+        categoria: "tipicas",
+        nomeCategoria: "Comidas Típicas",
+        titulo: "Feijoada Tradicional Brasileira Completa",
+        resumo: "O prato símbolo do Brasil preparado com carnes nobres e salgadas dessalgadas, caldo encorpado aromático, couve refogada e farofa.",
+        imagem: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&auto=format&fit=crop&q=80",
+        preparo: "45 min",
+        cozimento: "120 min",
+        tempoTotal: "165 min",
+        tempoMinutos: 165,
+        rendimento: "10 a 12 pessoas",
+        dificuldade: "Médio",
+        calorias: "580 kcal",
+        carboidratos: "36g",
+        proteinas: "42g",
+        gorduras: "30g",
+        fibras: "12g",
+        intro: "A rainha da culinária nacional. Esta versão equilibra carnes defumadas e salgadas selecionadas para garantir caldo aveludado e sabor inigualável.",
+        ingredientes: [
+          "1 kg de feijão preto novo de boa qualidade",
+          "500g de carne-seca (charque) cortada em cubos",
+          "400g de costelinha suína salgada ou defumada",
+          "300g de lombo suíno salgado",
+          "300g de paio em rodelas grossas",
+          "300g de linguiça calabresa defumada em rodelas",
+          "200g de bacon em cubos",
+          "5 folhas de louro frescas",
+          "8 dentes de alho picados",
+          "2 cebolas grandes raladas",
+          "Suco de 1 laranja inteira e 1 dose de cachaça (opcional)"
+        ],
+        passos: [
+          "24 horas antes: corte a carne-seca, o lombo e a costelinha em pedaços e deixe de molho na geladeira, trocando a água de 4 a 5 vezes para dessalgar.",
+          "Cozinhe as carnes dessalgadas em água fervente por 15 minutos e escorra para eliminar o excesso de gordura.",
+          "Em um caldeirão grande, coloque o feijão lavado com as folhas de louro e cubra com 4 litros de água. Junte a carne-seca e a costelinha.",
+          "Cozinhe em fogo médio por 1 hora. Em seguida, adicione o lombo, o paio e a calabresa.",
+          "Cozinhe até o feijão e todas as carnes ficarem macios (cerca de mais 45 a 60 minutos).",
+          "Em uma frigideira grande, doure o bacon no próprio óleo. Adicione a cebola e o alho picados até dourar.",
+          "Pegue duas conchas do feijão cozido, amasse na frigideira com uma colher para formar uma pasta e devolva à panela grande. Isso engrossa o caldo naturalmente.",
+          "Adicione a dose de cachaça e o suco de laranja. Deixe ferver em fogo brando por mais 15 minutos para apurar."
+        ],
+        dicaChef: "Amassar duas conchas de feijão e devolver à panela é o verdadeiro truque dos mestres de feijoada para um caldo aveludado e espesso sem usar amido.",
+        errosComuns: "Não dessalgar adequadamente as carnes com antecedência. Se errar no sal da carne, a feijoada inteira ficará intragável.",
+        conservacao: "A feijoada fica ainda melhor no dia seguinte. Guarde na geladeira por até 4 dias ou congele por até 90 dias em potes herméticos.",
+        substituicoes: "Quem prefere uma feijoada mais leve pode excluir cortes com gordura e priorizar lombo, costelinha magra e carne-seca nobre."
+      },
+      {
+        id: 7,
+        slug: "baiao-de-dois-tradicional",
+        categoria: "tipicas",
+        nomeCategoria: "Comidas Típicas",
+        titulo: "Baião de Dois com Queijo de Coalho e Manteiga de Garrafa",
+        resumo: "Prato emblemático do Nordeste com feijão-de-corda fresco, arroz agulhinha soltinho, carne-seca desfiada e cubos tostados de queijo coalho.",
+        imagem: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&auto=format&fit=crop&q=80",
+        preparo: "25 min",
+        cozimento: "45 min",
+        tempoTotal: "70 min",
+        tempoMinutos: 70,
+        rendimento: "8 porções fartas",
+        dificuldade: "Médio",
+        calorias: "460 kcal",
+        carboidratos: "55g",
+        proteinas: "24g",
+        gorduras: "16g",
+        fibras: "6.5g",
+        intro: "Imortalizado pela canção de Humberto Teixeira e Luiz Gonzaga, o baião de dois une o sertão ao litoral nordestino em uma explosão de sabor e aconchego.",
+        ingredientes: [
+          "500g de feijão-de-corda (ou feijão-fradinho)",
+          "2 xícaras de arroz cru lavado",
+          "350g de carne-seca dessalgada, cozida e desfiada",
+          "200g de bacon picadinho",
+          "1 gomo de linguiça calabresa picada",
+          "300g de queijo coalho cortado em cubos médios",
+          "4 colheres de sopa de manteiga de garrafa",
+          "1 cebola roxa grande picadinha",
+          "5 dentes de alho picados",
+          "1 pimentão verde picado",
+          "Cheiro-verde e coentro fresco picado a gosto"
+        ],
+        passos: [
+          "Cozinhe o feijão-de-corda em água com 1 folha de louro e um pouco de sal até ficar al dente (cerca de 20 minutos após chiar a pressão). Reserve o feijão e o caldo do cozimento.",
+          "Em uma panela grande, doure o bacon e a calabresa até ficarem crocantes. Retire o excesso de gordura se necessário.",
+          "Junte a manteiga de garrafa, a cebola roxa, o pimentão e o alho, refogando até murchar.",
+          "Adicione a carne-seca desfiada e misture bem para absorver todos os temperos.",
+          "Acrescente o arroz cru e refogue por 2 minutos.",
+          "Junte o feijão cozido e adicione 4 xícaras do caldo reservado do feijão quente.",
+          "Cozinhe com a panela semitampada em fogo médio até o arroz secar e ficar macio.",
+          "Em uma frigideira à parte, sele os cubos de queijo coalho na manteiga até dourar. Misture o queijo e o coentro ao arroz pronto antes de servir."
+        ],
+        dicaChef: "Utilize o caldo do próprio cozimento do feijão para cozinhar o arroz. É isso que dá a coloração característica e transfere o sabor profundo ao grão.",
+        errosComuns: "Deixar o feijão cozinhar demais antes de juntar o arroz; ele vira pasta. O grão deve estar firme.",
+        conservacao: "Conserve refrigerado por até 3 dias. Reaqueça com um fio de manteiga de garrafa para devolver o brilho.",
+        substituicoes: "Se não encontrar feijão-de-corda verde, use feijão fradinho seco pré-cozido. Na ausência de manteiga de garrafa, use manteiga comum clarificada (ghee)."
+      },
+      {
+        id: 8,
+        slug: "moqueca-baiana-de-peixe",
+        categoria: "tipicas",
+        nomeCategoria: "Comidas Típicas",
+        titulo: "Moqueca Baiana Autêntica com Peixe e Camarão",
+        resumo: "Postas de peixe nobre cozidas em panela de barro com leite de coco fresco, pimentões coloridos, azeite de dendê perfumado e coentro.",
+        imagem: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=800&auto=format&fit=crop&q=80",
+        preparo: "30 min",
+        cozimento: "30 min",
+        tempoTotal: "60 min",
+        tempoMinutos: 60,
+        rendimento: "6 porções",
+        dificuldade: "Médio",
+        calorias: "390 kcal",
+        carboidratos: "12g",
+        proteinas: "34g",
+        gorduras: "22g",
+        fibras: "3.2g",
+        intro: "Cozinhada lentamente em panela de barro sem adição de água, a moqueca baiana extrai os sumos naturais dos vegetais com a força do dendê e a suavidade do leite de coco.",
+        ingredientes: [
+          "1 kg de postas de peixe firme (robalo, badejo, cação ou dourado)",
+          "400g de camarão médio limpo (opcional)",
+          "Suco de 2 limões taiti",
+          "4 dentes de alho amassados",
+          "2 cebolas grandes cortadas em rodelas",
+          "2 tomates maduros em rodelas",
+          "1 pimentão vermelho, 1 amarelo e 1 verde em rodelas finas",
+          "400ml de leite de coco espesso",
+          "4 colheres de sopa de azeite de dendê de qualidade",
+          "1 maço de coentro fresco picado e cebolinha",
+          "1 pimenta-dedo-de-moça sem sementes picadinha"
+        ],
+        passos: [
+          "Tempere o peixe e os camarões com o alho, suco de limão, sal e pimenta. Deixe marinar por 20 minutos.",
+          "Em uma panela de barro ou de fundo grosso, regue o fundo com 2 colheres de azeite de dendê.",
+          "Faça camadas alternadas: uma camada de cebolas, tomates e pimentões; em seguida, acomode as postas de peixe.",
+          "Cubra com outra camada de vegetais e finalize com o coentro fresco e a pimenta.",
+          "Regue tudo com o leite de coco e o restante do azeite de dendê. Não acrescente água.",
+          "Tampe a panela e leve ao fogo médio. Quando ferver, reduza para fogo baixo e cozinhe por cerca de 20 a 25 minutos sem mexer para não despedaçar o peixe.",
+          "Nos últimos 5 minutos de cozimento, adicione os camarões sobre a superfície até ficarem rosados.",
+          "Sirva fumegante com pirão feito com o caldo da própria moqueca e farofa de dendê."
+        ],
+        dicaChef: "Nunca mexa a moqueca com colher enquanto cozinha; se necessário, apenas balance a panela pelas alças para acomodar o líquido sem quebrar as postas.",
+        errosComuns: "Usar peixes com carne muito mole (como merluza congelada), que desmancham e transformam a moqueca em sopa de peixe.",
+        conservacao: "Consuma preferencialmente fresca. Guarde na geladeira por até 2 dias.",
+        substituicoes: "Para a versão capixaba, basta omitir o leite de coco e o azeite de dendê, utilizando azeite de oliva e urucum (colorau)."
+      },
+      {
+        id: 9,
+        slug: "escondidinho-de-carne-seca",
+        categoria: "tipicas",
+        nomeCategoria: "Comidas Típicas",
+        titulo: "Escondidinho de Carne-Seca com Purê Cremoso de Mandioca",
+        resumo: "Camadas aveludadas de purê de aipim com requeijão cremoso, recheio saboroso de carne-seca desfiada acebolada e cobertura gratinada de queijo.",
+        imagem: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&auto=format&fit=crop&q=80",
+        preparo: "35 min",
+        cozimento: "45 min",
+        tempoTotal: "80 min",
+        tempoMinutos: 80,
+        rendimento: "8 porções",
+        dificuldade: "Médio",
+        calorias: "420 kcal",
+        carboidratos: "40g",
+        proteinas: "26g",
+        gorduras: "18g",
+        fibras: "4.8g",
+        intro: "Receita amada de norte a sul do país, perfeita para refeições de confraternização e excelente opção lucrativa para cardápios de delivery.",
+        ingredientes: [
+          "1 kg de carne-seca dessalgada, cozida na pressão e desfiada",
+          "1 kg de mandioca (aipim/macaxeira) cozida bem macia",
+          "2 colheres de sopa de manteiga",
+          "1 xícara de leite integral ou creme de leite",
+          "1 copo de requeijão cremoso (200g)",
+          "2 cebolas grandes cortadas em tiras finas (julienne)",
+          "4 dentes de alho picados",
+          "2 tomates picados sem sementes",
+          "200g de queijo mussarela ou queijo coalho ralado para gratinar",
+          "Cheiro-verde picadinho e noz-moscada ralada na hora"
+        ],
+        passos: [
+          "Para o purê: amasse a mandioca ainda bem quente no espremedor de batatas ou bata no processador com a manteiga e o leite até obter textura lisa. Tempere com sal e noz-moscada.",
+          "Em uma frigideira grande, aqueça 2 colheres de azeite e doure as cebolas até caramelizarem levemente.",
+          "Junte o alho e os tomates picados, refogando por 3 minutos.",
+          "Adicione a carne-seca desfiada, cheiro-verde e refogue bem até ficar úmida e apetitosa.",
+          "Montagem: em um refratário untado, espalhe metade do purê de mandioca.",
+          "Distribua todo o recheio de carne-seca acebolada.",
+          "Espalhe colheradas de requeijão cremoso por cima da carne.",
+          "Cubra com o restante do purê de mandioca e finalize com o queijo ralado.",
+          "Leve ao forno a 200°C por 20 minutos até borbulhar e o queijo dourar na superfície."
+        ],
+        dicaChef: "Retire o fiapo central da mandioca antes de amassar. Amassar enquanto ainda está quente garante que o purê fique aveludado sem grumos.",
+        errosComuns: "Deixar a carne-seca excessivamente seca no refogado. O recheio precisa de umidade para não ressecar durante o tempo de forno.",
+        conservacao: "Excelente para congelar montado (sem assar) por até 90 dias.",
+        substituicoes: "A mandioca pode ser combinada meio a meio com batata-baroa (mandioquinha). O recheio pode ser frango desfiado ou cogumelos."
+      },
+      {
+        id: 10,
+        slug: "pao-de-queijo-mineiro-artesanal",
+        categoria: "tipicas",
+        nomeCategoria: "Comidas Típicas",
+        titulo: "Pão de Queijo Mineiro Artesanal (Crocante por Fora, Puxa-Puxa por Dentro)",
+        resumo: "A clássica receita mineira escaldada com polvilho doce e azedo, usando bastante queijo meia cura artesanal da Serra da Canastra.",
+        imagem: "https://images.unsplash.com/photo-1598110756774-8b654e9959e4?w=800&auto=format&fit=crop&q=80",
+        preparo: "25 min",
+        cozimento: "25 min",
+        tempoTotal: "50 min",
+        tempoMinutos: 50,
+        rendimento: "30 pães médios",
+        dificuldade: "Médio",
+        calorias: "115 kcal por unidade",
+        carboidratos: "14g",
+        proteinas: "3.8g",
+        gorduras: "5g",
+        fibras: "0.2g",
+        intro: "O pão de queijo verdadeiro não leva essência ou pó artificial. Leva polvilho escaldado, queijo curado ralado na hora e ovos de verdade.",
+        ingredientes: [
+          "250g de polvilho azedo",
+          "250g de polvilho doce",
+          "1 xícara de leite integral (240ml)",
+          "1/2 xícara de óleo vegetal (120ml)",
+          "1 colher de sobremesa rasa de sal (10g)",
+          "3 ovos médios caipiras",
+          "350g de queijo meia cura ralado grosso (ou queijo padrão/canastra)",
+          "50g de queijo parmesão ralado fino para acentuar o sabor"
+        ],
+        passos: [
+          "Em uma tigela grande, misture os dois polvilhos e o sal.",
+          "Em uma panela, junte o leite e o óleo e leve ao fogo até ferver.",
+          "Escalde o polvilho despejando o líquido fervente aos poucos e mexendo vigorosamente com uma colher de pau até formar blocos de massa. Deixe esfriar por 15 minutos até ficar morno.",
+          "Adicione os ovos um a um, amassando com as mãos até a massa absorver completamente.",
+          "Adicione os queijos ralados e amasse bem até obter uma massa lisa, brilhante e que desgruda das mãos (com ligeira pegajosidade característica).",
+          "Unte as mãos com um pouco de óleo e modele bolinhas de cerca de 30g a 40g.",
+          "Disponha em assadeira com espaço entre eles e asse em forno pré-aquecido a 200°C por cerca de 25 minutos até crescerem e dourarem levemente na base."
+        ],
+        dicaChef: "A combinação de polvilho doce (que dá estrutura elástica) com polvilho azedo (que faz o pão expandir e ficar oco por dentro) é o grande segredo dos mineiros.",
+        errosComuns: "Adicionar os ovos na massa ainda fervendo; isso cozinha as claras antes da hora e estraga a elasticidade do pão.",
+        conservacao: "Modele as bolinhas e congele em aberto numa assadeira por 2 horas; depois guarde em saquinhos plásticos no freezer por até 90 dias. Asse direto congelado.",
+        substituicoes: "Se não encontrar queijo da Canastra, use queijo prato ou provolone misturado com queijo minas padrão."
+      },
+      {
+        id: 11,
+        slug: "galinhada-goiana-tradicional",
+        categoria: "tipicas",
+        nomeCategoria: "Comidas Típicas",
+        titulo: "Galinhada Goiana Tradicional com Açafrão e Milho",
+        resumo: "Pedaços dourados de frango caipira cozidos na mesma panela com arroz enriquecido, açafrão-da-terra, cheiro-verde e pimenta-de-cheiro.",
+        imagem: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&auto=format&fit=crop&q=80",
+        preparo: "20 min",
+        cozimento: "40 min",
+        tempoTotal: "60 min",
+        tempoMinutos: 60,
+        rendimento: "6 porções",
+        dificuldade: "Fácil",
+        calorias: "440 kcal",
+        carboidratos: "48g",
+        proteinas: "32g",
+        gorduras: "12g",
+        fibras: "2.8g",
+        intro: "Prato icônico da região Centro-Oeste brasileira, reconfortante e repleto de memórias familiares, feito em uma única panela.",
+        ingredientes: [
+          "1 frango cortado à passarinho ou em pedaços pequenos (cerca de 1,2kg)",
+          "2 xícaras de arroz cru",
+          "1 lata de milho verde escorrido",
+          "1 colher de sopa de açafrão-da-terra puro (cúrcuma)",
+          "4 dentes de alho picados e suco de 1 limão para marinar",
+          "1 cebola grande picada",
+          "2 tomates maduros picados",
+          "3 pimentas-de-cheiro picadinhas (sem ardência excessiva)",
+          "Cheiro-verde abundante picado"
+        ],
+        passos: [
+          "Tempere o frango com alho, limão, sal e pimenta-do-reino por pelo menos 30 minutos.",
+          "Em uma panela grande e funda, aqueça 3 colheres de óleo e doure bem os pedaços de frango até formarem uma crosta castanha na panela (é ali que reside o sabor).",
+          "Junte a cebola picada e o açafrão-da-terra, mexendo até soltar o fundo dourado da panela.",
+          "Adicione os tomates picados, a pimenta-de-cheiro e o milho.",
+          "Acrescente o arroz cru e refogue por 2 minutos para envolver nos temperos.",
+          "Adicione 4 xícaras de água fervente, ajuste o sal e deixe cozinhar em fogo médio com a panela semitampada até secar o líquido.",
+          "Desligue o fogo, tampe completamente e deixe descansar por 10 minutos para finalizar o cozimento no vapor. Finalize com cheiro-verde."
+        ],
+        dicaChef: "Deixe o frango dourar intensamente antes de adicionar os demais ingredientes. A borra formada na panela garante a coloração e aroma profundos do arroz.",
+        errosComuns: "Colocar água fria, o que interrompe a fervura e deixa o arroz empapado.",
+        conservacao: "Mantém-se por até 3 dias na geladeira.",
+        substituicoes: "Tradicionalmente pode-se acrescentar polpa de pequi cozida se for do gosto regional."
+      },
+
+      // 3. Carnes e Churrascos
+      {
+        id: 12,
+        slug: "costela-bovina-assada-no-forno",
+        categoria: "carnes",
+        nomeCategoria: "Carnes & Churrascos",
+        titulo: "Costela Bovina Assada no Forno (Desmanchando no Osso)",
+        resumo: "Cozimento lento a baixa temperatura com sal grosso e manteiga, garantindo carne suculenta que solta do osso sem faca.",
+        imagem: "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&auto=format&fit=crop&q=80",
+        preparo: "15 min",
+        cozimento: "180 min",
+        tempoTotal: "195 min",
+        tempoMinutos: 195,
+        rendimento: "8 porções",
+        dificuldade: "Fácil",
+        calorias: "520 kcal",
+        carboidratos: "0g",
+        proteinas: "38g",
+        gorduras: "40g",
+        fibras: "0g",
+        intro: "A costela ponta de agulha ou janela é um dos cortes mais saborosos do boi. O segredo não é técnica complexa, mas sim o respeito rigoroso ao tempo de forno e vedação.",
+        ingredientes: [
+          "2,5 kg de costela bovina (janela ou minga) com boa capa de gordura",
+          "2 colheres de sopa de sal grosso triturado",
+          "4 dentes de alho picados com azeite",
+          "2 ramos de alecrim fresco",
+          "2 colheres de sopa de manteiga",
+          "Papel alumínio resistente ou celofane próprio para churrasco"
+        ],
+        passos: [
+          "Limpe a peça retirando excessos de cartilagem solta e faça pequenos furos superficiais na carne.",
+          "Esfregue a pasta de alho e o sal grosso triturado por toda a peça. Pincele a manteiga na parte superior.",
+          "Coloque a costela com os ossos virados para baixo em uma assadeira grande.",
+          "Embrulhe a assadeira com 4 a 5 voltas de papel alumínio de boa espessura, garantindo que não haja frestas para o vapor escapar.",
+          "Leve ao forno pré-aquecido a 160°C por 3 horas e meia ininterruptas.",
+          "Após esse tempo, retire cuidadosamente o papel alumínio (cuidado com o vapor quente).",
+          "Aumente a temperatura do forno para 220°C e asse por mais 20 minutos para criar uma crosta dourada e crocante na capa de gordura."
+        ],
+        dicaChef: "A vedação com papel alumínio é fundamental: ela cria uma câmara de pressão úmida que derrete o colágeno duro da carne, transformando-o em gelatina macia.",
+        errosComuns: "Assar em fogo alto desde o início. A costela endurecerá e ficará ressecada.",
+        conservacao: "Até 4 dias na geladeira em recipiente vedado. Pode ser desfiada para rechear sanduíches, pastéis ou empadas.",
+        substituicoes: "O mesmo método pode ser aplicado para corte de cupim ou fraldinha alta."
+      },
+      {
+        id: 13,
+        slug: "picanha-no-ponto-perfeito",
+        categoria: "carnes",
+        nomeCategoria: "Carnes & Churrascos",
+        titulo: "Picanha Nobre no Ponto Perfeito com Farofa de Alho",
+        resumo: "Aprenda a escolher a peça correta, selar a gordura, fatiar a favor da fibra e atingir o ponto rosado ideal com suculência incomparável.",
+        imagem: "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&auto=format&fit=crop&q=80",
+        preparo: "10 min",
+        cozimento: "20 min",
+        tempoTotal: "30 min",
+        tempoMinutos: 30,
+        rendimento: "6 porções",
+        dificuldade: "Médio",
+        calorias: "480 kcal",
+        carboidratos: "0g",
+        proteinas: "36g",
+        gorduras: "38g",
+        fibras: "0g",
+        intro: "A grande estrela do churrasco brasileiro. Saber preparar a picanha na grelha ou na frigideira de ferro garante status de mestre churrasqueiro.",
+        ingredientes: [
+          "1 peça inteira de picanha bovina de aproximadamente 1,1kg a 1,3kg",
+          "Sal de parrilla ou flor de sal a gosto",
+          "Pimenta-do-reino moída na hora (opcional)",
+          "Para a farofa: 2 colheres de manteiga, 6 dentes de alho laminados e 2 xícaras de farinha de mandioca biju"
+        ],
+        passos: [
+          "Corte a picanha em bifes grossos (steaks) de 2 a 3 dedos de espessura (cerca de 4cm), cortando a favor ou contra a fibra conforme sua preferência de corte final.",
+          "Faça leves cortes superficiais em formato de losango na capa de gordura (sem atingir a carne).",
+          "Tempere com sal de parrilla cerca de 3 minutos antes de levar ao fogo forte (grelha ou chapa bem quente a 15cm da brasa).",
+          "Primeiro, sele a capa de gordura virada para o calor por cerca de 2 minutos para tostar.",
+          "Em seguida, sele os dois lados da carne por 3 a 4 minutos de cada lado até criar uma crosta marrom profunda.",
+          "Suba a carne para uma área de calor indireto por mais 4 minutos se desejar ponto para mais.",
+          "O PASSO CRUCIAL: Deixe a carne descansar em uma tábua de madeira por 3 minutos antes de cortar. Isso redistribui os sucos internos e evita perda de umidade.",
+          "Para a farofa: doure o alho na manteiga em fogo baixo até chiar, junte a farinha e mexa até dourar crocante."
+        ],
+        dicaChef: "Nunca fure a picanha com garfo durante o cozimento e nunca corte imediatamente após sair da brasa. O descanso de 3 a 5 minutos é o segredo dos maiores assadores.",
+        errosComuns: "Comprar peças com mais de 1,4kg achando que é vantajoso. Peças acima desse peso geralmente incluem pedaços de coxão duro.",
+        conservacao: "Melhor consumida imediatamente. Sobras podem ser fatiadas fininhas e servidas frias como carpaccio rústico.",
+        substituicoes: "O sal de parrilla pode ser feito moendo sal grosso comum no liquidificador até grãos médios."
+      },
+      {
+        id: 14,
+        slug: "carne-de-panela-com-batatas",
+        categoria: "carnes",
+        nomeCategoria: "Carnes & Churrascos",
+        titulo: "Carne de Panela Suculenta com Batatas e Cenouras Rústicas",
+        resumo: "Cortes macios de acém ou músculo cozidos lentamente em molho espesso e aromático com vinho tinto, cebola dourada e legumes no ponto.",
+        imagem: "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&auto=format&fit=crop&q=80",
+        preparo: "20 min",
+        cozimento: "45 min",
+        tempoTotal: "65 min",
+        tempoMinutos: 65,
+        rendimento: "6 porções",
+        dificuldade: "Fácil",
+        calorias: "380 kcal",
+        carboidratos: "22g",
+        proteinas: "34g",
+        gorduras: "16g",
+        fibras: "3.5g",
+        intro: "O clássico do almoço caseiro brasileiro. O aroma de carne de panela cozinhando com cebola e louro perfuma a casa inteira e acolhe o coração.",
+        ingredientes: [
+          "1 kg de acém, músculo ou paleta cortados em cubos médios (4x4cm)",
+          "3 batatas médias descascadas e cortadas em pedaços grandes",
+          "2 cenouras em rodelas grossas",
+          "2 cebolas grandes picadas",
+          "4 dentes de alho amassados",
+          "2 colheres de sopa de extrato de tomate concentrado",
+          "1/2 xícara de vinho tinto seco (opcional, dá cor e profundidade)",
+          "2 folhas de louro, sal, pimenta-do-reino e cheiro-verde a gosto"
+        ],
+        passos: [
+          "Tempere a carne com alho, sal e pimenta-do-reino.",
+          "Na panela de pressão, aqueça 2 colheres de óleo e doure os cubos de carne em fogo alto aos poucos sem amontoar, para criar fundo caramelizado.",
+          "Junte a cebola picada e refogue até dourar.",
+          "Adicione o extrato de tomate e o vinho tinto, raspando o fundo da panela com uma colher de pau.",
+          "Coloque as folhas de louro e cubra com água quente até o nível da carne (não exagere na água).",
+          "Tampe a panela de pressão. Quando pegar pressão, abaixe o fogo e cozinhe por 30 minutos.",
+          "Desligue o fogo e aguarde a pressão sair naturalmente.",
+          "Abra a panela, adicione as batatas e cenouras, feche a pressão novamente e cozinhe por mais 7 minutos.",
+          "Finalize com cheiro-verde fresco picado."
+        ],
+        dicaChef: "Corte os legumes em pedaços grandes para que não desmanchem no tempo final de pressão.",
+        errosComuns: "Colocar os legumes junto com a carne no início. O tempo de cozimento da carne é muito maior e as batatas virariam purê líquido.",
+        conservacao: "Até 4 dias na geladeira. O molho fica ainda mais encorpado no dia seguinte.",
+        substituicoes: "O acém pode ser trocado por peito bovino, rabo ou ossobuco."
+      },
+      {
+        id: 15,
+        slug: "pernil-suino-assado-suculento",
+        categoria: "carnes",
+        nomeCategoria: "Carnes & Churrascos",
+        titulo: "Pernil Suíno Assado Suculento com Marinada Cítrica",
+        resumo: "Marinada aromática de 24 horas com cachaça, laranja e alecrim, resultando em carne macia, aromática e casca pururuca crocante.",
+        imagem: "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&auto=format&fit=crop&q=80",
+        preparo: "25 min",
+        cozimento: "150 min",
+        tempoTotal: "175 min",
+        tempoMinutos: 175,
+        rendimento: "12 porções",
+        dificuldade: "Médio",
+        calorias: "410 kcal",
+        carboidratos: "4g",
+        proteinas: "38g",
+        gorduras: "26g",
+        fibras: "0.2g",
+        intro: "O prato festivo por excelência dos almoços de domingo e festas de fim de ano. O segredo da carne de porco macia é a marinada ácida equilibrada.",
+        ingredientes: [
+          "1 peça de pernil suíno com osso (cerca de 3kg a 3,5kg)",
+          "Suco de 4 laranjas e suco de 2 limões",
+          "1 dose de cachaça ou vinho branco seco (100ml)",
+          "8 dentes de alho triturados",
+          "1 cebola grande picada",
+          "2 colheres de sopa de sal grosso",
+          "Ramos de alecrim, tomilho e folhas de louro fresco"
+        ],
+        passos: [
+          "Faça furos profundos na carne do pernil com uma faca afiada (sem furar o couro).",
+          "Bata no liquidificador o suco de laranja, limão, cachaça, alho, cebola e sal.",
+          "Coloque o pernil em um saco culinário com a marinada e as ervas. Feche e deixe marinar na geladeira por 12 a 24 horas, virando a peça na metade do tempo.",
+          "Acomode o pernil em assadeira funda com a marinada, cubra com papel alumínio e asse a 180°C por 2 horas e meia.",
+          "Retire o papel alumínio, regue a carne com os sucos do fundo da assadeira e aumente a temperatura para 220°C por 30 minutos até pururucar e dourar intensamente."
+        ],
+        dicaChef: "A cachaça e os sucos cítricos agem quebrando as fibras colágenas do porco, garantindo que o pernil não fique ressecado.",
+        errosComuns: "Assar sem líquido no fundo da forma, o que queima a gordura e resseca a carne.",
+        conservacao: "Dura até 5 dias refrigerado. Fica magnífico fatiado em sanduíches com vinagrete.",
+        substituicoes: "Pode ser feito com paleta suína ou lombo (reduzindo o tempo de forno para o lombo não secar)."
+      },
+      {
+        id: 16,
+        slug: "frango-assado-crocante-com-ervas",
+        categoria: "carnes",
+        nomeCategoria: "Carnes & Churrascos",
+        titulo: "Frango Assado Inteiro Crocante com Manteiga de Ervas",
+        resumo: "Pele crocante dourada como frango de padaria com peito suculento e manteiga temperada inserida sob a pele.",
+        imagem: "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&auto=format&fit=crop&q=80",
+        preparo: "20 min",
+        cozimento: "75 min",
+        tempoTotal: "95 min",
+        tempoMinutos: 95,
+        rendimento: "6 porções",
+        dificuldade: "Fácil",
+        calorias: "360 kcal",
+        carboidratos: "1g",
+        proteinas: "35g",
+        gorduras: "24g",
+        fibras: "0.2g",
+        intro: "O frango assado perfeito tem pele estaladiça e carne úmida. O método de espalhar manteiga sob a pele protege a carne do peito do calor direto.",
+        ingredientes: [
+          "1 frango inteiro limpo (aproximadamente 2kg)",
+          "100g de manteiga em temperatura ambiente",
+          "4 dentes de alho picadinhos",
+          "Raspas de 1 limão siciliano",
+          "Ervas frescas picadas (alecrim, tomilho e sálvia)",
+          "1 colher de sopa de páprica doce ou defumada",
+          "1 colher de sopa de sal e pimenta-do-reino",
+          "1 cebola e 1 limão cortados ao meio para rechear a cavidade"
+        ],
+        passos: [
+          "Seque muito bem a pele do frango com papel toalha (a umidade impede a pele de ficar crocante).",
+          "Misture a manteiga com alho, raspas de limão, ervas picadas e páprica.",
+          "Com os dedos delicadamente, solte a pele sobre o peito e coxas do frango sem rasgar.",
+          "Insira a manteiga temperada diretamente sob a pele, espalhando uniformemente com as mãos sobre a carne do peito.",
+          "Tempere o exterior da pele com sal fino e pimenta.",
+          "Coloque as metades de cebola e limão dentro da cavidade interna e amarre as pernas com barbante culinário.",
+          "Asse em forno pré-aquecido a 200°C por cerca de 1 hora e 15 minutos até dourar intensamente."
+        ],
+        dicaChef: "Secar a pele com papel toalha e salgar com antecedência é a técnica fundamental dos melhores chefs para conseguir a pele estaladiça.",
+        errosComuns: "Cobrir com papel alumínio: o vapor amolece a pele e impede a crocância.",
+        conservacao: "Até 3 dias na geladeira em pote fechado.",
+        substituicoes: "Pode ser feito apenas com coxas e sobrecoxas usando o mesmo tempero de manteiga."
+      },
+
+      // 4. Receitas para Restaurantes
+      {
+        id: 17,
+        slug: "strogonoff-de-frango-executivo",
+        categoria: "restaurante",
+        nomeCategoria: "Para Restaurantes",
+        titulo: "Strogonoff de Frango Profissional (Padronizado e Escalonável)",
+        resumo: "Receita comercial de alta margem de lucro com molho encorpado, frango macio selado sem soltar água e rendimento calibrado.",
+        imagem: "https://images.unsplash.com/photo-1550547660-d9450f859349?w=800&auto=format&fit=crop&q=80",
+        preparo: "20 min",
+        cozimento: "20 min",
+        tempoTotal: "40 min",
+        tempoMinutos: 40,
+        rendimento: "10 porções comerciais (220g de proteína com molho)",
+        dificuldade: "Fácil",
+        calorias: "380 kcal por porção",
+        carboidratos: "11g",
+        proteinas: "34g",
+        gorduras: "21g",
+        fibras: "1.2g",
+        intro: "O prato mais vendido em praças de alimentação e cardápios executivos no Brasil. Esta ficha técnica evita o problema comum do creme talhar no rechaud.",
+        ingredientes: [
+          "1,5 kg de filé de peito de frango limpo cortado em cubos de 2x2cm",
+          "3 caixas de creme de leite de boa qualidade (600g - teor de gordura mínimo de 20%)",
+          "5 colheres de sopa de extrato ou molho de tomate concentrado",
+          "4 colheres de sopa de mostarda amarela de boa qualidade",
+          "3 colheres de sopa de molho inglês",
+          "200g de cogumelos champignon fatiados escorridos",
+          "2 cebolas médias picadinhas bem finas",
+          "4 dentes de alho picados",
+          "3 colheres de sopa de manteiga com um fio de óleo para selar",
+          "Sal e pimenta-do-reino a gosto"
+        ],
+        passos: [
+          "Aqueça bem uma frigideira profissional ou panela de fundo grosso. Sele o frango em etapas pequenas (cerca de 500g por vez) em fogo alto com manteiga para não juntar água e ressecar.",
+          "Reserve o frango selado e na mesma panela doure a cebola e o alho, aproveitando a crosta dourada do frango.",
+          "Volte todo o frango selado para a panela.",
+          "Adicione o extrato de tomate, a mostarda e o molho inglês, misturando por 3 minutos para apurar e incorporar os sabores.",
+          "Junte os cogumelos fatiados.",
+          "Reduza o fogo para o mínimo absoluto e acrescente o creme de leite.",
+          "Mexa continuamente sem deixar levantar fervura forte, apenas aquecendo até o molho ficar aveludado e homogêneo.",
+          "Mantenha em banho-maria (rechaud) a 65°C para o serviço executivo."
+        ],
+        dicaChef: "Para restaurantes: adicione o creme de leite somente na temperatura baixa e nunca deixe ferver borbulhando no rechaud para não quebrar a emulsão de gordura.",
+        errosComuns: "Colocar todo o frango de uma vez na panela fria; a carne cozinha na própria água e fica borrachuda em vez de suculenta.",
+        conservacao: "Pode ser resfriado rapidamente a 4°C e regenerado em banho-maria por até 3 dias mantendo a textura original.",
+        substituicoes: "Para versão bovina, substitua pelo mesmo peso de alcatra, filé mignon ou coxão mole limpo."
+      },
+      {
+        id: 18,
+        slug: "file-de-peito-a-parmegiana",
+        categoria: "restaurante",
+        nomeCategoria: "Para Restaurantes",
+        titulo: "Filé de Frango à Parmegiana Comercial com Molho Rústico",
+        resumo: "Empanamento triplo profissional que não solta no molho, coberto com molho caseiro de tomates pelados e queijo gratinado.",
+        imagem: "https://images.unsplash.com/photo-1550547660-d9450f859349?w=800&auto=format&fit=crop&q=80",
+        preparo: "25 min",
+        cozimento: "20 min",
+        tempoTotal: "45 min",
+        tempoMinutos: 45,
+        rendimento: "8 porções individuais",
+        dificuldade: "Médio",
+        calorias: "490 kcal",
+        carboidratos: "28g",
+        proteinas: "42g",
+        gorduras: "22g",
+        fibras: "2.1g",
+        intro: "Campeão absoluto de vendas em marmitex e restaurantes a la carte. O segredo de um bom parmegiana comercial é a crocância mantida sob o molho.",
+        ingredientes: [
+          "8 filés de peito de frango de 160g cada, batidos levemente para espessura uniforme",
+          "Farinha de trigo para empanar",
+          "3 ovos batidos com 50ml de água e sal",
+          "Farinha de rosca profissional (ou panko) temperada com queijo ralado",
+          "Molho: 2 latas de tomate pelado triturado, 1 cebola, 3 dentes de alho e folhas de manjericão fresco",
+          "350g de queijo mussarela ralado ou fatiado",
+          "50g de queijo parmesão ralado fino para finalizar"
+        ],
+        passos: [
+          "Tempere os filés com sal, alho e pimenta.",
+          "Passe o filé na farinha de trigo (retire o excesso), mergulhe nos ovos batidos e passe firmemente na farinha de rosca, pressionando bem.",
+          "Frite em óleo a 175°C até dourar de ambos os lados (cerca de 3 a 4 minutos). Escorra em grade para manter a crocância.",
+          "Molho: refogue alho e cebola no azeite, junte os tomates pelados triturados, sal e manjericão, cozinhando por 15 minutos até encorpar.",
+          "Montagem para servir ou entrega: acomode os filés na travessa ou marmita térmica.",
+          "Cubra com uma concha generosa de molho quente no centro (deixando as pontas crocantes aparentes).",
+          "Disponha a mussarela e o parmesão por cima e leve ao forno/gratinador a 220°C por 6 minutos até derreter e dourar."
+        ],
+        dicaChef: "Para delivery: não cubra totalmente o filé com molho. Deixar as bordas sem molho garante que a casquinha chegue crocante na casa do cliente.",
+        errosComuns: "Usar óleo frio para fritar, o que encharca o empanamento de gordura.",
+        conservacao: "Os filés podem ser empanados e congelados crus em camadas separadas por plástico por até 60 dias.",
+        substituicoes: "A receita é idêntica para parmegiana de carne bovina (alcatra ou contrafilé)."
+      },
+      {
+        id: 19,
+        slug: "lasanha-tradicional-a-bolonhesa",
+        categoria: "restaurante",
+        nomeCategoria: "Para Restaurantes",
+        titulo: "Lasanha Tradicional à Bolonhesa (Rendimento para Travessas e Marmitex)",
+        resumo: "Molho bolonhesa encorpado de cozimento lento, molho bechamel cremoso e massa intercalada perfeitamente para corte uniforme.",
+        imagem: "https://images.unsplash.com/photo-1550547660-d9450f859349?w=800&auto=format&fit=crop&q=80",
+        preparo: "40 min",
+        cozimento: "45 min",
+        tempoTotal: "85 min",
+        tempoMinutos: 85,
+        rendimento: "12 porções comerciais de 350g",
+        dificuldade: "Médio",
+        calorias: "520 kcal por porção",
+        carboidratos: "45g",
+        proteinas: "31g",
+        gorduras: "24g",
+        fibras: "3.4g",
+        intro: "A queridinha dos buffets de massas e fins de semana. Estruturada para manter as camadas firmes sem escorrer ao ser cortada.",
+        ingredientes: [
+          "500g de massa de lasanha pré-cozida ou fresca",
+          "Bolonhesa: 1kg de carne moída (patinho ou acém), 2 cebolas picadas, 4 dentes de alho, 1 cenoura ralada fina, 800g de molho de tomate e 1 xícara de caldo",
+          "Bechamel (Molho Branco): 60g de manteiga, 60g de farinha de trigo, 1 litro de leite morno, noz-moscada e sal",
+          "500g de queijo mussarela ralado ou fatiado",
+          "400g de presunto fatiado",
+          "100g de queijo parmesão para gratinar"
+        ],
+        passos: [
+          "Faça o molho bolonhesa: refogue a cebola, alho e a cenoura no azeite. Adicione a carne moída e sele bem. Junte o molho de tomate e cozinhe por 25 minutos.",
+          "Faça o bechamel: derreta a manteiga, adicione a farinha e mexa por 2 minutos (roux). Adicione o leite morno aos poucos batendo com fouet até engrossar aveludado. Tempere com noz-moscada.",
+          "Montagem em assadeira gastronômica: camada fina de molho no fundo, massa, camada de bolonhesa, presunto, mussarela e concha de bechamel.",
+          "Repita as camadas finalizando com massa, molho bechamel farto, mussarela e parmesão ralado.",
+          "Asse em forno a 190°C por 30 a 35 minutos até gratinar e borbulhar.",
+          "Aguarde 10 minutos antes de cortar as porções para assentar as camadas."
+        ],
+        dicaChef: "A cenoura ralada no molho bolonhesa quebra a acidez do tomate de forma natural sem necessidade de adicionar açúcar branco.",
+        errosComuns: "Cortar a lasanha fervendo assim que sai do forno; as camadas deslizam e o prato desmorona.",
+        conservacao: "Excelente para congelar inteira ou em fatias embaladas individualmente por até 90 dias.",
+        substituicoes: "Pode ser feita substituindo o presunto por peito de peru ou espinafre refogado."
+      },
+
+      // 5. Sobremesas e Doces
+      {
+        id: 20,
+        slug: "pudim-de-leite-condensado-lisinho",
+        categoria: "sobremesas",
+        nomeCategoria: "Sobremesas & Doces",
+        titulo: "Pudim de Leite Condensado Lisinho sem Furinhos",
+        resumo: "A técnica definitiva para obter um pudim com textura de veludo, calda âmbar brilhante e corte sedoso impecável.",
+        imagem: "https://images.unsplash.com/photo-1587314168485-3236d6710814?w=800&auto=format&fit=crop&q=80",
+        preparo: "20 min",
+        cozimento: "80 min",
+        tempoTotal: "100 min",
+        tempoMinutos: 100,
+        rendimento: "12 fatias",
+        dificuldade: "Médio",
+        calorias: "290 kcal",
+        carboidratos: "45g",
+        proteinas: "6.2g",
+        gorduras: "9.5g",
+        fibras: "0g",
+        intro: "A sobremesa mais disputada das famílias brasileiras. Furinho ou liso? Para quem busca o pudim clássico de restaurante de luxo, esta técnica é infalível.",
+        ingredientes: [
+          "1 lata de leite condensado (395g)",
+          "A mesma medida da lata de leite integral (cerca de 350ml)",
+          "3 ovos médios inteiros passados por peneira fina",
+          "1 colher de chá de extrato de baunilha (opcional)",
+          "Calda: 1 xícara de açúcar refinado (180g) e 1/2 xícara de água fervente (120ml)"
+        ],
+        passos: [
+          "Para a calda: derreta o açúcar em fogo brando em uma panela até formar um caramelo dourado uniforme. Adicione a água fervente com cuidado e mexa até dissolver os torrões. Caramelize a forma com furo central (20cm) e reserve.",
+          "Para o pudim lisinho: não bata no liquidificador em alta rotação (o ar incorporado é o responsável pelos furinhos). Em uma tigela, misture delicadamente com um batedor manual os ovos peneirados, o leite condensado e o leite integral.",
+          "Passe a mistura por uma peneira fina diretamente para a forma caramelizada.",
+          "Cubra a forma com papel alumínio bem vedado.",
+          "Asse em banho-maria em forno a 160°C por cerca de 1h20. (Coloque água já quente na assadeira do banho-maria com algumas gotas de vinagre para não escurecer a forma).",
+          "O pudim estará pronto quando a superfície estiver firme ao toque leve, mas ainda com ligeiro tremor no centro.",
+          "Deixe esfriar completamente e leve à geladeira por no mínimo 6 horas antes de desenformar."
+        ],
+        dicaChef: "A temperatura baixa do forno (160°C) e não bater no liquidificador impedem que as proteínas do ovo coagulem bruscamente com bolhas de ar, garantindo textura de veludo.",
+        errosComuns: "Desenformar o pudim morno. A gordura e os açúcares ainda não estabilizaram e ele vai quebrar ao virar.",
+        conservacao: "Conserve tampado na geladeira por até 7 dias.",
+        substituicoes: "Se preferir com furinhos: basta bater por 3 minutos no liquidificador e assar a 190°C."
+      }
+    ];
+
+    /* =====================================================================
+       BANCO DE DADOS LOCAL DE ARTIGOS EDUCATIVOS (6 ARTIGOS COMPLETOS)
+       ===================================================================== */
+    const BANCO_ARTIGOS = [
+      {
+        id: 1,
+        slug: "segredos-bolo-fofinho",
+        titulo: "Os 7 Segredos Científicos para um Bolo Fofinho e Sem Solar",
+        resumo: "Entenda o papel do glúten, temperatura dos ingredientes, aeração de gorduras e termodinâmica do forno para nunca mais errar uma massa.",
+        icone: "🍰",
+        conteudoHtml: `
+          <h2>Os 7 Segredos Científicos para um Bolo Fofinho e Sem Solar</h2>
+          <div class="artigo-meta">Por Equipe Sabores do Brasil • Guia Prático de Confeitaria</div>
+          <div class="artigo-texto">
+            <p>Quem nunca tirou do forno um bolo murcho, pesado ou com textura de borracha? O processo de assar um bolo não é intuição: é uma reação química precisa de transformação física de amidos, gorduras e proteínas.</p>
+            
+            <h3>1. A temperatura dos ingredientes é fundamental</h3>
+            <p>Ovos, leite e manteiga devem estar impreterivelmente em <strong>temperatura ambiente</strong> (por volta de 20°C a 23°C). Ingredientes gelados quebram a emulsão da massa e impedem que os cristais de gordura aprisionem microbolhas de ar.</p>
+
+            <h3>2. O erro mortal de bater a farinha de trigo em excesso</h3>
+            <p>O liquidificador ou a batedeira servem para bater ovos, açúcar e gordura. No momento em que você adiciona a farinha de trigo, o eletrodoméstico deve ser desligado. Misture delicadamente com um fouet (batedor de arame). Bater farinha desenvolve o glúten, que forma teias elásticas — ótimo para pães, mas desastroso para bolos, pois resulta em massa solada e densa.</p>
+
+            <h3>3. Aeração correta dos ovos e açúcar</h3>
+            <p>Bater ovos com açúcar até esbranquiçar cria milhares de bolsas de ar retidas na gordura da gema e na proteína da clara. Esse ar expandirá quando atingir 60°C no forno, empurrando o bolo para cima antes do fermento agir.</p>
+
+            <h3>4. Fermento: teste de eficácia e momento de adição</h3>
+            <p>O fermento químico é sempre o último ingrediente. Para testar se o seu fermento ainda está ativo, coloque uma colher de chá em meio copo de água morna: ele deve efervescer intensamente na hora. Se não efervescer, descarte.</p>
+
+            <h3>5. Pré-aquecimento real de 15 minutos</h3>
+            <p>Colocar a massa em um forno frio ou morno é garantia de bolo que não cresce. O forno precisa estar estabilizado na temperatura indicada (geralmente 180°C) para provocar a expansão imediata dos gases.</p>
+
+            <h3>6. A regra de ouro dos 30 minutos</h3>
+            <p>Nunca abra a porta do forno antes de 30 minutos de cozimento. A estrutura do bolo ainda é líquida e sustentada apenas pela pressão do ar quente. Abrir a porta causa uma queda de temperatura de até 30°C, fazendo a massa desabar no centro.</p>
+
+            <h3>7. Peneirar os secos</h3>
+            <p>Peneirar a farinha e o cacau remove grumos compactados e aerifica o pó, facilitando a hidratação rápida sem exigir esforço mecânico sobre a massa.</p>
+          </div>
+        `
+      },
+      {
+        id: 2,
+        slug: "calculo-porcoes-grandes",
+        titulo: "Como Calcular Quantidades de Ingredientes para Grandes Eventos",
+        resumo: "Tabelas de gramatura por pessoa para carnes, arroz, feijão, guarnições e bebidas em almoços de família ou restaurantes.",
+        icone: "📊",
+        conteudoHtml: `
+          <h2>Como Calcular Quantidades de Ingredientes para Muitas Pessoas</h2>
+          <div class="artigo-meta">Por Equipe Sabores do Brasil • Gestão e Gastronomia Prática</div>
+          <div class="artigo-texto">
+            <p>Cozinhar para 10, 30 ou 50 pessoas gera dúvidas frequentes. O cálculo gastronômico profissional baseia-se em gramaturas médias de consumo individual por refeição.</p>
+
+            <h3>Regra Geral de Proteínas (Carnes, Aves e Peixes)</h3>
+            <ul>
+              <li><strong>Carnes sem osso (alcatra, patinho, peito de frango):</strong> 200g a 250g cru por adulto.</li>
+              <li><strong>Carnes com osso (costela, pernil, coxa e sobrecoxa):</strong> 350g a 400g cru por adulto (devido à perda de peso de ossos e gorduras).</li>
+              <li><strong>Churrasco com múltiplos cortes:</strong> Calcule 400g a 500g de carne variada no total por adulto para eventos de mais de 4 horas de duração.</li>
+            </ul>
+
+            <h3>Acompanhamentos Básicos</h3>
+            <ul>
+              <li><strong>Arroz cru:</strong> 50g por pessoa (que rende cerca de 150g de arroz cozido soltinho).</li>
+              <li><strong>Feijão cru:</strong> 30g a 40g por pessoa (rende cerca de 120g de feijão em caldo).</li>
+              <li><strong>Farofa:</strong> 30g a 40g por pessoa.</li>
+              <li><strong>Massas como prato principal:</strong> 120g a 150g de massa seca por pessoa; como guarnição, 70g.</li>
+              <li><strong>Salada de folhas verdes:</strong> 50g por pessoa.</li>
+              <li><strong>Maionese de batatas:</strong> 150g por pessoa.</li>
+            </ul>
+
+            <h3>Bebidas e Sobremesas</h3>
+            <ul>
+              <li><strong>Refrigerantes e sucos:</strong> 600ml a 800ml por convidado.</li>
+              <li><strong>Cerveja:</strong> 1,5 a 2 litros por adulto consumidor em eventos de 4 horas.</li>
+              <li><strong>Bolo de aniversário/festa:</strong> 100g de fatia por pessoa.</li>
+              <li><strong>Docinhos (brigadeiro/beijinho):</strong> 4 a 6 unidades por pessoa.</li>
+            </ul>
+          </div>
+        `
+      },
+      {
+        id: 3,
+        slug: "guia-cortes-de-carne",
+        titulo: "Guia Definitivo dos Cortes de Carne: Qual Peça Escolher?",
+        resumo: "Diferenças anatômicas entre carnes de primeira, segunda, dianteiro e traseiro para grelhar, assar, ensopar ou moer.",
+        icone: "🥩",
+        conteudoHtml: `
+          <h2>Guia Definitivo dos Cortes de Carne Bovinos</h2>
+          <div class="artigo-meta">Por Equipe Sabores do Brasil • Conhecimento de Açougue</div>
+          <div class="artigo-texto">
+            <p>O boi não produz carne dura ou mole sem motivo: a dureza depende diretamente de quanta carga muscular aquele músculo suportou durante a vida do animal. Músculos de locomoção possuem mais colágeno; músculos de apoio são macios.</p>
+
+            <h3>1. Cortes para Grelha Rápida e Frigideira (Cocção Curta)</h3>
+            <p>São cortes nobres com pouquíssimo tecido conjuntivo que devem ser preparados em calor intenso e rápido para manter suculência:</p>
+            <ul>
+              <li><strong>Picanha:</strong> maciez extrema e capa de gordura que irriga a fibra.</li>
+              <li><strong>Contrafilé:</strong> sabor marcante com marmoreio intramuscular.</li>
+              <li><strong>Filé Mignon:</strong> o mais macio de todos, porém com sabor suave (ótimo com molhos).</li>
+              <li><strong>Fraldinha:</strong> fibras longas e muito suculentas quando fatiadas contra a fibra.</li>
+            </ul>
+
+            <h3>2. Cortes para Panela de Pressão e Ensopados (Cocção Longa e Úmida)</h3>
+            <p>Carnes ricas em colágeno que precisam de calor e umidade prolongados para que o tecido rígido derreta e vire gelatina aveludada:</p>
+            <ul>
+              <li><strong>Músculo:</strong> o campeão de colágeno, rende os molhos mais encorpados da culinária.</li>
+              <li><strong>Acém:</strong> saboroso, marmorizado e excelente para carne de panela e moída.</li>
+              <li><strong>Paleta:</strong> carne macia do dianteiro com fibras suculentas.</li>
+              <li><strong>Rabo e Mocotó:</strong> gelatinosos por excelência.</li>
+            </ul>
+
+            <h3>3. Cortes para Assados Longos no Forno ou Bafo</h3>
+            <p>Cortes com ossos e gordura que suportam de 3 a 5 horas de forno brando:</p>
+            <ul>
+              <li><strong>Costela minga e janela:</strong> sabor incomparável quando cozida lentamente.</li>
+              <li><strong>Cupim:</strong> fibras entremeadas de gordura que exigem cozimento prévio ou longo assado.</li>
+              <li><strong>Pernil e Paleta suína:</strong> assados aromáticos e de alto rendimento.</li>
+            </ul>
+          </div>
+        `
+      },
+      {
+        id: 4,
+        slug: "organizacao-cardapio-semanal",
+        titulo: "Como Organizar o Cardápio Semanal e Reduzir o Desperdício",
+        resumo: "Método prático de meal prep, reaproveitamento seguro de sobras e economia nas compras de supermercado e feira.",
+        icone: "📅",
+        conteudoHtml: `
+          <h2>Como Organizar o Cardápio Semanal e Evitar Desperdício</h2>
+          <div class="artigo-meta">Por Equipe Sabores do Brasil • Economia Doméstica</div>
+          <div class="artigo-texto">
+            <p>O planejamento alimentar economiza até 40% nas compras mensais de supermercado e elimina o estresse diário do 'o que vamos comer hoje?'.</p>
+
+            <h3>1. Planeje em torno dos ingredientes perecíveis</h3>
+            <p>Monte o cardápio da semana começando pelas folhas e vegetais mais frágeis (rúcula, alface, morango, peixe fresco) nos primeiros 2 dias pós-feira. Deixe raízes resistentes (abóbora, batata, cenoura) e carnes congeladas para o fim da semana.</p>
+
+            <h3>2. Base compartilhada de alimentos (Meal Prep)</h3>
+            <p>Em vez de cozinhar refeições completas do zero todos os dias, cozinhe as bases no domingo:</p>
+            <ul>
+              <li>Um pote grande de arroz integral ou branco soltinho.</li>
+              <li>Feijão cozido em ponto neutro (tempere porções individuais durante a semana).</li>
+              <li>Frango desfiado temperado: que vira recheio de tapioca na terça, escondidinho na quarta e molho na quinta.</li>
+              <li>Legumes assados em cubos (abobrinha, cenoura e cebola).</li>
+            </ul>
+
+            <h3>3. Regra de ouro da refrigeração: Primeiro que Entra, Primeiro que Sai</h3>
+            <p>Organize a geladeira posicionando os itens mais antigos na frente das prateleiras. Nunca guarde sobras em panelas: transfira para potes de vidro herméticos identificados com a data de preparo.</p>
+          </div>
+        `
+      },
+      {
+        id: 5,
+        slug: "arroz-soltinho-perfeito",
+        titulo: "O Segredo do Arroz Soltinho: Proporções, Gordura e Água Fervente",
+        resumo: "A ciência por trás do amido do arroz: fritura inicial dos grãos, relação de líquido e tempo exato de descanso na panela.",
+        icone: "🍚",
+        conteudoHtml: `
+          <h2>O Segredo do Arroz Branco Soltinho e Aromático</h2>
+          <div class="artigo-meta">Por Equipe Sabores do Brasil • Fundamentos da Cozinha</div>
+          <div class="artigo-texto">
+            <p>O arroz branco agulhinha é a base da alimentação do brasileiro. Mas por que às vezes ele empapa e vira bloco compacto?</p>
+
+            <h3>1. A proporção matemática clássica</h3>
+            <p>A regra universal infalível para arroz agulhinha comum é: <strong>1 xícara de arroz cru para 2 xícaras de água fervente</strong>. Usar água já fervente mantém a temperatura estável da panela e evita que o grão cozinhe em demasia antes do tempo.</p>
+
+            <h3>2. A selagem dos grãos no refogado (Nacarar)</h3>
+            <p>Refogue o alho picado no óleo ou banha sem queimar. Adicione o arroz cru e refogue por 1 a 2 minutos, mexendo sempre. Esse processo envolve cada grão individual em uma película de gordura aquecida, impedindo que os grãos colem uns aos outros durante o cozimento.</p>
+
+            <h3>3. Fogo e tampa</h3>
+            <p>Assim que adicionar a água fervente e o sal, misture uma única vez. <em>Nunca mais mexa o arroz enquanto ele cozinha</em>. Cozinhe em fogo médio com a panela <strong>semitampada</strong> até a água secar na superfície e formarem-se furinhos de vapor no arroz.</p>
+
+            <h3>4. O descanso obrigatório com a panela tampada</h3>
+            <p>Quando a água secar, desligue o fogo, tampe a panela completamente e aguarde 10 minutos sem abrir. O vapor retido finalizará o cozimento do centro do grão e secará a umidade superficial. Por fim, solte delicadamente com um garfo.</p>
+          </div>
+        `
+      },
+      {
+        id: 6,
+        slug: "higiene-seguranca-alimentar",
+        titulo: "Boas Práticas de Higiene e Segurança Alimentar na Cozinha",
+        resumo: "Como evitar contaminação cruzada, temperaturas de perigo, tábuas de corte corretas e conservação segura de alimentos.",
+        icone: "🧼",
+        conteudoHtml: `
+          <h2>Boas Práticas de Higiene e Segurança Alimentar</h2>
+          <div class="artigo-meta">Por Equipe Sabores do Brasil • Segurança e Saúde</div>
+          <div class="artigo-texto">
+            <p>Cozinhar com amor é também cuidar da saúde de quem consome. Pequenos deslizes na cozinha podem causar proliferação de bactérias nocivas como Salmonella e Staphylococcus.</p>
+
+            <h3>1. A zona de perigo de temperatura (5°C a 60°C)</h3>
+            <p>As bactérias se multiplicam rapidamente em temperatura ambiente. Nunca deixe alimentos cozidos fora da geladeira por mais de 2 horas. Ao esfriar alimentos quentes, transfira para potes rasos e leve à geladeira assim que parar de soltar vapor intenso.</p>
+
+            <h3>2. Contaminação Cruzada: Tábuas e Facas</h3>
+            <p>Nunca use a mesma faca ou tábua que cortou carne crua ou frango cru para cortar alimentos prontos para consumo, como legumes de salada, queijos ou pães, sem antes lavar vigorosamente com água quente e detergente.</p>
+
+            <h3>3. O mito de lavar carne de frango</h3>
+            <p><strong>Nunca lave frango ou carnes cruas na pia</strong>. A água corrente espalha gotículas invisíveis de bactérias por até 1 metro de distância na sua bancada, louças e escorredores. O calor do cozimento (acima de 74°C) é o único método seguro de eliminar bactérias.</p>
+
+            <h3>4. Descongelamento Seguro</h3>
+            <p>Nunca descongele carnes na bancada da pia em temperatura ambiente ou em bacia de água parada. Descongele sempre dentro da geladeira de um dia para o outro ou no modo descongelar do micro-ondas se for preparar imediatamente.</p>
+          </div>
+        `
+      }
+    ];
+
+    /* =====================================================================
+       ESTADO DA APLICAÇÃO E GERENCIAMENTO LOCAL (LOCALSTORAGE)
+       ===================================================================== */
+    let categoriaAtiva = 'todas';
+    let receitasFiltradas = [...BANCO_RECEITAS];
+    let favoritos = JSON.parse(localStorage.getItem('sabores_brasil_favoritos') || '[]');
+    let receitaAbertaAtual = null;
+
+    // Inicialização da aplicação ao carregar
+    document.addEventListener('DOMContentLoaded', () => {
+      // Atualizar ano do rodapé
+      document.getElementById('ano-atual').textContent = new Date().getFullYear();
+      
+      // Renderizar catálogo inicial de receitas
+      renderizarCatalogoReceitas(BANCO_RECEITAS);
+
+      // Renderizar artigos educativos
+      renderizarArtigosEducativos();
+
+      // Atualizar contador de favoritos
+      atualizarBadgeFavoritos();
+
+      // Verificar consentimento de cookies
+      verificarCookieConsentimento();
+
+      // Tratar navegação por URL hash (ex: #bolos, #receita/:id)
+      tratarHashUrl();
+      window.addEventListener('hashchange', tratarHashUrl);
+
+      // Evento de scroll para botão voltar ao topo
+      window.addEventListener('scroll', () => {
+        const btnTopo = document.getElementById('btn-topo');
+        if (window.scrollY > 400) {
+          btnTopo.classList.add('visivel');
+        } else {
+          btnTopo.classList.remove('visivel');
+        }
+      });
+    });
+
+    /* =====================================================================
+       RENDERIZAÇÃO DE COMPONENTES
+       ===================================================================== */
+    function renderizarCatalogoReceitas(lista) {
+      const container = document.getElementById('grade-receitas-container');
+      const contador = document.getElementById('contador-resultados');
+      
+      contador.textContent = `Mostrando ${lista.length} receita(s) encontrada(s)`;
+
+      if (lista.length === 0) {
+        container.innerHTML = `
+          <div class="sem-resultados">
+            <div class="sem-resultados-icone">🍲</div>
+            <h3>Nenhuma receita encontrada</h3>
+            <p>Não encontramos receitas para os filtros ou termos pesquisados. Tente buscar por outros ingredientes ou limpe a busca.</p>
+            <button class="btn-principal" onclick="limparBusca()">Ver Todas as Receitas</button>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = lista.map(rec => {
+        const isFav = favoritos.includes(rec.id);
+        const classeDif = rec.dificuldade === 'Fácil' ? 'dificuldade-facil' : (rec.dificuldade === 'Médio' ? 'dificuldade-medio' : 'dificuldade-avancado');
+
+        return `
+          <article class="card-receita" id="card-rec-${rec.id}">
+            <div class="receita-thumb">
+              <img src="${rec.imagem}" alt="${rec.titulo}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=800&auto=format&fit=crop&q=80'">
+              <span class="receita-cat-tag">${rec.nomeCategoria}</span>
+              <button class="btn-card-fav ${isFav ? 'favoritado' : ''}" onclick="alternarFavorito(${rec.id}, event)" title="${isFav ? 'Remover dos favoritos' : 'Salvar receita nos favoritos'}" aria-label="Favoritar ${rec.titulo}">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="${isFav ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2">
+                  <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg>
+              </button>
+            </div>
+            <div class="receita-conteudo">
+              <div class="receita-meta-topo">
+                <span class="meta-dificuldade ${classeDif}">● ${rec.dificuldade}</span>
+                <span>⏱️ ${rec.tempoTotal}</span>
+              </div>
+              <h3 class="receita-card-titulo">${rec.titulo}</h3>
+              <p class="receita-card-resumo">${rec.resumo}</p>
+              <div class="receita-detalhes-rapidos">
+                <span class="detalhe-item">🍽️ ${rec.rendimento}</span>
+                <span class="detalhe-item">🔥 ${rec.calorias}</span>
+              </div>
+              <button class="btn-ver-receita" onclick="abrirReceitaPorId(${rec.id})">
+                VER RECEITA COMPLETA
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    function renderizarArtigosEducativos() {
+      const container = document.getElementById('grade-artigos-container');
+      container.innerHTML = BANCO_ARTIGOS.map(art => `
+        <article class="card-dica">
+          <div class="dica-icone">${art.icone}</div>
+          <h3 class="dica-titulo">${art.titulo}</h3>
+          <p class="dica-resumo">${art.resumo}</p>
+          <button class="btn-ler-artigo" onclick="abrirArtigoPorId(${art.id})">
+            LER ARTIGO COMPLETO →
+          </button>
+        </article>
+      `).join('');
+    }
+
+    /* =====================================================================
+       BUSCA E FILTRAGEM DINÂMICA
+       ===================================================================== */
+    function executarBusca() {
+      const termo = document.getElementById('input-busca').value.toLowerCase().trim();
+      const dif = document.getElementById('select-dificuldade').value;
+      const tempo = document.getElementById('select-tempo').value;
+      const btnLimpar = document.getElementById('btn-limpar-busca');
+
+      btnLimpar.style.display = termo.length > 0 ? 'flex' : 'none';
+
+      let filtradas = BANCO_RECEITAS.filter(rec => {
+        // Categoria
+        const bateCategoria = (categoriaAtiva === 'todas') || (rec.categoria === categoriaAtiva);
+        
+        // Dificuldade
+        const bateDificuldade = (dif === 'todas') || (rec.dificuldade === dif);
+
+        // Tempo
+        let bateTempo = true;
+        if (tempo === '30') bateTempo = rec.tempoMinutos <= 30;
+        else if (tempo === '60') bateTempo = rec.tempoMinutos <= 60;
+        else if (tempo === '120') bateTempo = rec.tempoMinutos > 60;
+
+        // Termo de busca (nome, resumo, ingredientes, categoria)
+        let bateTexto = true;
+        if (termo) {
+          const noTitulo = rec.titulo.toLowerCase().includes(termo);
+          const noResumo = rec.resumo.toLowerCase().includes(termo);
+          const naCat = rec.nomeCategoria.toLowerCase().includes(termo);
+          const nosIngredientes = rec.ingredientes.some(ing => ing.toLowerCase().includes(termo));
+          bateTexto = noTitulo || noResumo || naCat || nosIngredientes;
+        }
+
+        return bateCategoria && bateDificuldade && bateTempo && bateTexto;
+      });
+
+      receitasFiltradas = filtradas;
+      renderizarCatalogoReceitas(receitasFiltradas);
+    }
+
+    function filtrarPorCategoria(cat) {
+      categoriaAtiva = cat;
+
+      // Atualizar classes ativas dos botões
+      document.querySelectorAll('.btn-filtro').forEach(btn => {
+        btn.classList.toggle('ativo', btn.dataset.cat === cat);
+      });
+
+      // Atualizar títulos do catálogo
+      const tituloAtual = document.getElementById('titulo-catalogo-atual');
+      const tagAtual = document.getElementById('tag-catalogo-atual');
+
+      const titulosMap = {
+        todas: 'Todas as Receitas',
+        bolos: 'Bolos e Tortas Caseiras',
+        tipicas: 'Comidas Típicas Brasileiras',
+        carnes: 'Carnes, Churrascos e Assados',
+        restaurante: 'Receitas Comerciais para Restaurantes',
+        sobremesas: 'Sobremesas e Doces Tradicionais'
+      };
+
+      tituloAtual.textContent = titulosMap[cat] || 'Receitas Selecionadas';
+      tagAtual.textContent = cat === 'todas' ? 'Catálogo Geral' : `Categoria: ${titulosMap[cat]}`;
+
+      executarBusca();
+      rolarPara('catalogo-receitas');
+    }
+
+    function limparBusca() {
+      document.getElementById('input-busca').value = '';
+      document.getElementById('select-dificuldade').value = 'todas';
+      document.getElementById('select-tempo').value = 'todos';
+      document.getElementById('btn-limpar-busca').style.display = 'none';
+      categoriaAtiva = 'todas';
+
+      document.querySelectorAll('.btn-filtro').forEach(btn => {
+        btn.classList.toggle('ativo', btn.dataset.cat === 'todas');
+      });
+
+      executarBusca();
+    }
+
+    function focarBusca() {
+      const input = document.getElementById('input-busca');
+      input.focus();
+      rolarPara('conteudo-principal');
+    }
+
+    /* =====================================================================
+       FAVORITOS (PERSISTÊNCIA EM LOCALSTORAGE)
+       ===================================================================== */
+    function alternarFavorito(id, event) {
+      if (event) event.stopPropagation();
+
+      const idx = favoritos.indexOf(id);
+      if (idx > -1) {
+        favoritos.splice(idx, 1);
+        mostrarToast('Receita removida dos seus favoritos!');
+      } else {
+        favoritos.push(id);
+        mostrarToast('Receita adicionada aos seus favoritos! ❤️');
+      }
+
+      localStorage.setItem('sabores_brasil_favoritos', JSON.stringify(favoritos));
+      atualizarBadgeFavoritos();
+      executarBusca();
+
+      if (receitaAbertaAtual && receitaAbertaAtual.id === id) {
+        atualizarBotaoModalFav();
+      }
+    }
+
+    function atualizarBadgeFavoritos() {
+      const badge = document.getElementById('badge-fav');
+      badge.textContent = favoritos.length;
+    }
+
+    function filtrarFavoritos() {
+      const favReceitas = BANCO_RECEITAS.filter(r => favoritos.includes(r.id));
+      
+      document.getElementById('titulo-catalogo-atual').textContent = 'Minhas Receitas Favoritas';
+      document.getElementById('tag-catalogo-atual').textContent = 'Favoritos Salvos';
+
+      renderizarCatalogoReceitas(favReceitas);
+      rolarPara('catalogo-receitas');
+
+      if (favReceitas.length === 0) {
+        mostrarToast('Você ainda não favoritou nenhuma receita. Clique no coração de qualquer receita para salvar!');
+      }
+    }
+
+    /* =====================================================================
+       VISUALIZAÇÃO DE RECEITA INDIVIDUAL (MODAL + SCHEMA.ORG RECIPE)
+       ===================================================================== */
+    function abrirReceitaPorId(id) {
+      const receita = BANCO_RECEITAS.find(r => r.id === Number(id));
+      if (!receita) return;
+
+      receitaAbertaAtual = receita;
+
+      // Injetar dados no modal
+      document.getElementById('modal-rec-titulo').textContent = receita.titulo;
+      document.getElementById('modal-rec-cat').textContent = receita.nomeCategoria;
+      document.getElementById('modal-rec-img').src = receita.imagem;
+      document.getElementById('modal-rec-img').alt = receita.titulo;
+      document.getElementById('modal-rec-intro').textContent = receita.intro;
+
+      document.getElementById('modal-rec-preparo').textContent = receita.preparo;
+      document.getElementById('modal-rec-cozimento').textContent = receita.cozimento;
+      document.getElementById('modal-rec-tempo').textContent = receita.tempoTotal;
+      document.getElementById('modal-rec-rendimento').textContent = receita.rendimento;
+      document.getElementById('modal-rec-dificuldade').textContent = receita.dificuldade;
+
+      // Ingredientes
+      const listaIng = document.getElementById('modal-rec-ingredientes');
+      listaIng.innerHTML = receita.ingredientes.map(ing => `<li>✔ ${ing}</li>`).join('');
+
+      // Passos
+      const listaPassos = document.getElementById('modal-rec-passos');
+      listaPassos.innerHTML = receita.passos.map(p => `<li>${p}</li>`).join('');
+
+      // Dicas extras
+      document.getElementById('modal-rec-dica').textContent = receita.dicaChef;
+      document.getElementById('modal-rec-erros').textContent = receita.errosComuns;
+      document.getElementById('modal-rec-conservacao').textContent = receita.conservacao;
+      document.getElementById('modal-rec-substituicoes').textContent = receita.substituicoes;
+
+      // Tabela nutricional
+      document.getElementById('modal-nutri-cal').textContent = receita.calorias;
+      document.getElementById('modal-nutri-carb').textContent = receita.carboidratos;
+      document.getElementById('modal-nutri-prot').textContent = receita.proteinas;
+      document.getElementById('modal-nutri-gord').textContent = receita.gorduras;
+      document.getElementById('modal-nutri-fib').textContent = receita.fibras;
+
+      // Receitas relacionadas (mesma categoria ou aleatórias)
+      const relContainer = document.getElementById('modal-rec-relacionadas');
+      const relacionadas = BANCO_RECEITAS.filter(r => r.id !== receita.id && r.categoria === receita.categoria).slice(0, 3);
+      relContainer.innerHTML = relacionadas.map(r => `
+        <div class="mini-card-rel" onclick="abrirReceitaPorId(${r.id})">
+          <img src="${r.imagem}" alt="${r.titulo}">
+          <p>${r.titulo}</p>
+        </div>
+      `).join('');
+
+      atualizarBotaoModalFav();
+
+      // Injetar dados estruturados Schema.org Recipe dinamicamente
+      injetarSchemaRecipe(receita);
+
+      // Exibir modal
+      const modal = document.getElementById('modal-receita');
+      modal.classList.add('aberto');
+      document.body.style.overflow = 'hidden';
+
+      // Atualizar hash URL para compartilhamento direto
+      history.pushState(null, '', `#receita-${receita.slug}`);
+    }
+
+    function fecharModalReceita() {
+      const modal = document.getElementById('modal-receita');
+      modal.classList.remove('aberto');
+      document.body.style.overflow = 'auto';
+      receitaAbertaAtual = null;
+
+      // Limpar schema específico
+      document.getElementById('schema-recipe').textContent = '';
+
+      if (window.location.hash.startsWith('#receita-')) {
+        history.pushState(null, '', window.location.pathname);
+      }
+    }
+
+    function fecharModalReceitaSeBackdrop(e) {
+      if (e.target.id === 'modal-receita') {
+        fecharModalReceita();
+      }
+    }
+
+    function atualizarBotaoModalFav() {
+      if (!receitaAbertaAtual) return;
+      const isFav = favoritos.includes(receitaAbertaAtual.id);
+      const btn = document.getElementById('btn-modal-fav');
+      const texto = document.getElementById('texto-modal-fav');
+
+      btn.classList.toggle('ativo-fav', isFav);
+      texto.textContent = isFav ? 'Salvo nos Favoritos (Remover)' : 'Salvar nos Favoritos';
+    }
+
+    function alternarFavoritoAtual() {
+      if (receitaAbertaAtual) {
+        alternarFavorito(receitaAbertaAtual.id);
+      }
+    }
+
+    function injetarSchemaRecipe(r) {
+      const schemaData = {
+        "@context": "https://schema.org",
+        "@type": "Recipe",
+        "name": r.titulo,
+        "description": r.resumo,
+        "image": [r.imagem],
+        "recipeCategory": r.nomeCategoria,
+        "recipeCuisine": "Brasileira",
+        "prepTime": "PT" + (parseInt(r.preparo) || 15) + "M",
+        "cookTime": "PT" + (parseInt(r.cozimento) || 30) + "M",
+        "totalTime": "PT" + (r.tempoMinutos || 45) + "M",
+        "recipeYield": r.rendimento,
+        "nutrition": {
+          "@type": "NutritionInformation",
+          "calories": r.calorias
+        },
+        "recipeIngredient": r.ingredientes,
+        "recipeInstructions": r.passos.map(step => ({
+          "@type": "HowToStep",
+          "text": step
+        }))
+      };
+
+      document.getElementById('schema-recipe').textContent = JSON.stringify(schemaData, null, 2);
+    }
+
+    /* =====================================================================
+       IMPRESSÃO, COMPARTILHAMENTO E CÓPIA DE LINK
+       ===================================================================== */
+    function imprimirReceita() {
+      window.print();
+    }
+
+    function copiarLinkReceita() {
+      const url = window.location.href;
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(url).then(() => {
+          mostrarToast('Link copiado para a área de transferência! 📋');
+        }).catch(() => {
+          mostrarToast('Link pronto para copiar: ' + url);
+        });
+      } else {
+        mostrarToast('Link da receita: ' + url);
+      }
+    }
+
+    function compartilharReceita() {
+      if (!receitaAbertaAtual) return;
+
+      if (navigator.share) {
+        navigator.share({
+          title: receitaAbertaAtual.titulo + ' — Sabores do Brasil',
+          text: 'Veja esta receita incrível que encontrei no portal Sabores do Brasil: ' + receitaAbertaAtual.titulo,
+          url: window.location.href
+        }).catch(() => {});
+      } else {
+        copiarLinkReceita();
+      }
+    }
+
+    /* =====================================================================
+       MODAIS DE ARTIGOS EDUCATIVOS
+       ===================================================================== */
+    function abrirArtigoPorId(id) {
+      const artigo = BANCO_ARTIGOS.find(a => a.id === Number(id));
+      if (!artigo) return;
+
+      const container = document.getElementById('artigo-conteudo-interno');
+      container.innerHTML = artigo.conteudoHtml;
+
+      const modal = document.getElementById('modal-artigo');
+      modal.classList.add('aberto');
+      document.body.style.overflow = 'hidden';
+
+      history.pushState(null, '', `#dica-${artigo.slug}`);
+    }
+
+    function fecharModalArtigo() {
+      document.getElementById('modal-artigo').classList.remove('aberto');
+      document.body.style.overflow = 'auto';
+      if (window.location.hash.startsWith('#dica-')) {
+        history.pushState(null, '', window.location.pathname);
+      }
+    }
+
+    function fecharModalArtigoSeBackdrop(e) {
+      if (e.target.id === 'modal-artigo') {
+        fecharModalArtigo();
+      }
+    }
+
+    /* =====================================================================
+       PÁGINAS INSTITUCIONAIS (SOBRE, CONTATO, POLÍTICAS, ADS.TXT)
+       ===================================================================== */
+    function abrirInstitucional(tipo) {
+      const container = document.getElementById('institucional-conteudo-interno');
+      let html = '';
+
+      if (tipo === 'sobre') {
+        html = `
+          <h2>Sobre o Portal Sabores do Brasil</h2>
+          <p>O <strong>Sabores do Brasil</strong> é um projeto editorial independente criado para celebrar, preservar e democratizar o patrimônio culinário de todas as regiões brasileiras.</p>
+          <h3>Nossa Missão</h3>
+          <p>Oferecer receitas práticas, testadas e descritas com precisão técnica e medidas padronizadas (gramas, xícaras de 240ml, colheres de sopa). Nosso objetivo é que tanto o cozinheiro amador quanto o profissional de restaurante ou marmitex tenham segurança total para executar cada prato com excelência.</p>
+          <h3>Compromisso com o Leitor</h3>
+          <p>Todas as receitas do nosso portal contam com instruções detalhadas de conservação, alternativas de ingredientes, controle de desperdício e dicas reais de chef. Não utilizamos promessas milagrosas nem títulos enganosos.</p>
+        `;
+      } else if (tipo === 'contato') {
+        html = `
+          <h2>Fale Conosco</h2>
+          <p>Tem dúvidas sobre alguma receita, sugestões de pratos tradicionais ou propostas de parcerias? Envie uma mensagem para nossa equipe editorial.</p>
+          <form class="form-contato" onsubmit="enviarMensagemContato(event)">
+            <div class="grupo-campo">
+              <label for="campo-nome">Seu Nome Completo:</label>
+              <input type="text" id="campo-nome" required placeholder="Ex: Maria da Silva">
+            </div>
+            <div class="grupo-campo">
+              <label for="campo-email">Seu E-mail de Contato:</label>
+              <input type="email" id="campo-email" required placeholder="Ex: maria@email.com">
+            </div>
+            <div class="grupo-campo">
+              <label for="campo-assunto">Assunto da Mensagem:</label>
+              <input type="text" id="campo-assunto" required placeholder="Dúvida sobre receita, sugestão ou parceria">
+            </div>
+            <div class="grupo-campo">
+              <label for="campo-mensagem">Sua Mensagem Detalhada:</label>
+              <textarea id="campo-mensagem" rows="4" required placeholder="Escreva aqui sua mensagem..."></textarea>
+            </div>
+            <div class="aviso-estatico">
+              ℹ️ <strong>Nota Técnica:</strong> Este portal opera como site estático. Para ativar o envio real de mensagens em seu servidor de produção, integre este formulário a serviços como Formspree, Netlify Forms ou envie diretamente para contato@saboresdobrasil.com.br.
+            </div>
+            <button type="submit" class="btn-principal" style="align-self: flex-start; margin-top: 0.5rem;">
+              Enviar Mensagem
+            </button>
+          </form>
+        `;
+      } else if (tipo === 'privacidade') {
+        html = `
+          <h2>Política de Privacidade</h2>
+          <p>Última atualização: Outubro de 2026.</p>
+          <p>O portal <strong>Sabores do Brasil</strong> preza pela transparência e respeito à privacidade dos seus visitantes, em estrita conformidade com a Lei Geral de Proteção de Dados Pessoais (LGPD - Lei nº 13.709/2018).</p>
+          <h3>1. Coleta de Informações</h3>
+          <p>Nosso portal não exige cadastro para navegação e não coleta dados pessoais sensíveis. Dados de favoritos e histórico de receitas são armazenados exclusivamente na memória local do seu próprio navegador (localStorage) e nunca são transmitidos a servidores externos.</p>
+          <h3>2. Google AdSense e Cookies de Terceiros</h3>
+          <p>Para manter o portal 100% gratuito, veiculamos anúncios fornecidos pelo Google AdSense. O Google, como fornecedor de terceiros, utiliza cookies (incluindo o cookie DART) para veicular anúncios baseados nas visitas do usuário a este e a outros sites na internet.</p>
+          <p>Você pode desativar a publicidade personalizada acessando as <a href="https://adssettings.google.com" target="_blank" rel="noopener">Configurações de Anúncios do Google</a>.</p>
+          <h3>3. Seus Direitos</h3>
+          <p>Você tem o direito de solicitar informações, bloquear cookies em seu navegador ou limpar dados locais a qualquer momento.</p>
+        `;
+      } else if (tipo === 'cookies') {
+        html = `
+          <h2>Política de Cookies</h2>
+          <p>Cookies são pequenos arquivos de texto armazenados no seu dispositivo para lembrar suas preferências e melhorar a experiência de navegação.</p>
+          <h3>Tipos de Cookies Utilizados:</h3>
+          <ul>
+            <li><strong>Cookies Essenciais:</strong> Mantêm o funcionamento técnico das preferências da aplicação.</li>
+            <li><strong>Cookies de Desempenho e Estatísticas:</strong> Auxiliam a compreender como os visitantes interagem com as receitas.</li>
+            <li><strong>Cookies de Publicidade:</strong> Utilizados por parceiros como o Google AdSense para exibir anúncios relevantes e evitar anúncios repetitivos.</li>
+          </ul>
+          <p>Você pode configurar seu navegador para recusar todos os cookies ou avisar quando um cookie estiver sendo enviado.</p>
+        `;
+      } else if (tipo === 'termos') {
+        html = `
+          <h2>Termos de Uso</h2>
+          <p>Ao navegar pelo portal Sabores do Brasil, você concorda com as seguintes condições:</p>
+          <ul>
+            <li>O conteúdo do portal destina-se a fins estritamente informativos, gastronômicos e educativos.</li>
+            <li>As receitas e artigos originais são de propriedade intelectual do Sabores do Brasil. É permitida a reprodução de trechos curtos desde que acompanhada de menção expressa à autoria e link para o portal original.</li>
+            <li>Não nos responsabilizamos por variações de resultado decorrentes de ingredientes adulterados, alterações nas medidas recomendadas ou mau funcionamento de fornos e equipamentos dos usuários.</li>
+          </ul>
+        `;
+      } else if (tipo === 'nutricional') {
+        html = `
+          <h2>Aviso sobre Informações Nutricionais e Alergias</h2>
+          <p>As tabelas e valores nutricionais (calorias, carboidratos, gorduras e proteínas) apresentados nas receitas deste portal são <strong>estimativas calculadas</strong> com base em tabelas gerais de composição de alimentos para porções de referência.</p>
+          <h3>Atenção a Alergias e Restrições Alimentares</h3>
+          <p>Receitas podem conter ou ter entrado em contato com alérgenos comuns, como glúten (trigo), lactose (leites e queijos), ovos, oleaginosas, amendoim e frutos do mar. Indivíduos celíacos, intolerantes ou alérgicos devem sempre checar os rótulos específicos de cada ingrediente adquirido no comércio antes do consumo.</p>
+        `;
+      } else if (tipo === 'adstxt') {
+        html = `
+          <h2>Instruções para o Arquivo ads.txt (Google AdSense)</h2>
+          <p>O arquivo <code>ads.txt</code> (Authorized Digital Sellers) é um método recomendado pelo IAB e exigido pelo Google AdSense para garantir a legitimidade da venda dos espaços publicitários do seu site.</p>
+          <h3>Como Configurar seu ads.txt:</h3>
+          <ol style="margin-left: 1.5rem; line-height: 1.8;">
+            <li>Acesse sua conta no Google AdSense e localize seu ID de editor exclusivo (formato: <code>pub-XXXXXXXXXXXXXXXX</code>).</li>
+            <li>Crie um arquivo de texto simples chamado exatamente <code>ads.txt</code>.</li>
+            <li>Insira a linha oficial com seu ID real:
+              <pre style="background: #EFEBE9; padding: 0.75rem; border-radius: 6px; font-family: monospace; margin: 0.5rem 0; overflow-x: auto;">google.com, pub-COLE_SEU_ID_AQUI, DIRECT, f08c47fec0942fa0</pre>
+            </li>
+            <li>Faça o upload do arquivo na raiz do seu domínio web, de modo que fique acessível publicamente em:
+              <br><code>https://seudominio.com.br/ads.txt</code>
+            </li>
+          </ol>
+          <p style="margin-top: 1rem;">O Google costuma rastrear e validar o arquivo em até algumas horas ou poucos dias após a publicação.</p>
+        `;
+      }
+
+      container.innerHTML = html;
+      document.getElementById('modal-institucional').classList.add('aberto');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function fecharModalInstitucional() {
+      document.getElementById('modal-institucional').classList.remove('aberto');
+      document.body.style.overflow = 'auto';
+    }
+
+    function fecharModalInstitucionalSeBackdrop(e) {
+      if (e.target.id === 'modal-institucional') {
+        fecharModalInstitucional();
+      }
+    }
+
+    function enviarMensagemContato(e) {
+      e.preventDefault();
+      mostrarToast('Mensagem recebida com sucesso! Obrigado pelo seu contato.');
+      fecharModalInstitucional();
+    }
+
+    /* =====================================================================
+       BANNER DE COOKIES
+       ===================================================================== */
+    function verificarCookieConsentimento() {
+      const consentimento = localStorage.getItem('sabores_brasil_cookie_consent');
+      if (!consentimento) {
+        document.getElementById('cookie-banner').style.display = 'block';
+      }
+    }
+
+    function aceitarCookies() {
+      localStorage.setItem('sabores_brasil_cookie_consent', 'true');
+      document.getElementById('cookie-banner').style.display = 'none';
+      mostrarToast('Preferências de cookies salvas com sucesso.');
+    }
+
+    /* =====================================================================
+       UTILITÁRIOS: TOAST, SCROLL, MENU MOBILE E HASH NAVIGATION
+       ===================================================================== */
+    let toastTimeout = null;
+    function mostrarToast(msg) {
+      const toast = document.getElementById('toast-notificacao');
+      const texto = document.getElementById('toast-mensagem');
+
+      texto.textContent = msg;
+      toast.classList.add('ativo');
+
+      if (toastTimeout) clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('ativo');
+      }, 3500);
+    }
+
+    function rolarPara(id) {
+      const elemento = document.getElementById(id);
+      if (elemento) {
+        elemento.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function voltarAoTopo() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function navegarPara(id) {
+      rolarPara(id);
+    }
+
+    function alternarMenuMobile() {
+      const menu = document.getElementById('menu-mobile');
+      const overlay = document.getElementById('menu-overlay');
+      const aberto = menu.classList.contains('aberto');
+
+      if (aberto) {
+        fecharMenuMobile();
+      } else {
+        menu.classList.add('aberto');
+        overlay.classList.add('aberto');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function fecharMenuMobile() {
+      document.getElementById('menu-mobile').classList.remove('aberto');
+      document.getElementById('menu-overlay').classList.remove('aberto');
+      document.body.style.overflow = 'auto';
+    }
+
+    function tratarHashUrl() {
+      const hash = window.location.hash;
+      if (!hash) return;
+
+      if (hash.startsWith('#receita-')) {
+        const slug = hash.replace('#receita-', '');
+        const rec = BANCO_RECEITAS.find(r => r.slug === slug);
+        if (rec) abrirReceitaPorId(rec.id);
+      } else if (hash.startsWith('#dica-')) {
+        const slug = hash.replace('#dica-', '');
+        const art = BANCO_ARTIGOS.find(a => a.slug === slug);
+        if (art) abrirArtigoPorId(art.id);
+      } else if (hash === '#bolos') {
+        filtrarPorCategoria('bolos');
+      } else if (hash === '#tipicas') {
+        filtrarPorCategoria('tipicas');
+      } else if (hash === '#carnes') {
+        filtrarPorCategoria('carnes');
+      } else if (hash === '#restaurante') {
+        filtrarPorCategoria('restaurante');
+      } else if (hash === '#sobremesas') {
+        filtrarPorCategoria('sobremesas');
+      } else if (hash === '#favoritos') {
+        filtrarFavoritos();
+      } else if (hash === '#sobre') {
+        abrirInstitucional('sobre');
+      } else if (hash === '#contato') {
+        abrirInstitucional('contato');
+      } else if (hash === '#privacidade') {
+        abrirInstitucional('privacidade');
+      } else if (hash === '#cookies') {
+        abrirInstitucional('cookies');
+      } else if (hash === '#termos') {
+        abrirInstitucional('termos');
+      }
+    }
+  </script>
+</body>
+</html>
